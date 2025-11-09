@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentInformationSystem
 {
-    public partial class AdminLandingPage : Form
+    public partial class GradesPage : Form
     {
-        public AdminLandingPage()
+        public GradesPage()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

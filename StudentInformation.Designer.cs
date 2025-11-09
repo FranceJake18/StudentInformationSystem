@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Announcements = new System.Windows.Forms.Button();
             this.Attendance = new System.Windows.Forms.Button();
             this.Grades = new System.Windows.Forms.Button();
             this.StudInfo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataStudInfo = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.AddStudInfo = new System.Windows.Forms.Button();
             this.UpdateStudInfo = new System.Windows.Forms.Button();
             this.DeleteStudInfo = new System.Windows.Forms.Button();
             this.SearchStudInfo = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.SearchStudTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataStudInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -67,6 +71,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 621);
             this.panel2.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Lavender;
+            this.panel6.Location = new System.Drawing.Point(0, 490);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 38);
+            this.panel6.TabIndex = 15;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Lavender;
+            this.panel5.Location = new System.Drawing.Point(0, 558);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 38);
+            this.panel5.TabIndex = 14;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Location = new System.Drawing.Point(0, 102);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 38);
+            this.panel4.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Lavender;
+            this.panel3.Location = new System.Drawing.Point(0, 34);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 38);
+            this.panel3.TabIndex = 12;
             // 
             // Announcements
             // 
@@ -133,7 +169,7 @@
             this.panel1.Controls.Add(this.Attendance);
             this.panel1.Controls.Add(this.StudInfo);
             this.panel1.Controls.Add(this.Grades);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 61);
             this.panel1.TabIndex = 6;
@@ -149,14 +185,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Student Information System";
             // 
-            // dataGridView1
+            // dataStudInfo
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(212, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 498);
-            this.dataGridView1.TabIndex = 7;
+            this.dataStudInfo.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataStudInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataStudInfo.GridColor = System.Drawing.Color.LavenderBlush;
+            this.dataStudInfo.Location = new System.Drawing.Point(212, 171);
+            this.dataStudInfo.Name = "dataStudInfo";
+            this.dataStudInfo.Size = new System.Drawing.Size(1040, 498);
+            this.dataStudInfo.TabIndex = 10;
             // 
             // label2
             // 
@@ -226,49 +263,6 @@
             this.SearchStudInfo.Text = "Search";
             this.SearchStudInfo.UseVisualStyleBackColor = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(208, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "List of students";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Lavender;
-            this.panel3.Location = new System.Drawing.Point(0, 34);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 38);
-            this.panel3.TabIndex = 12;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Lavender;
-            this.panel4.Location = new System.Drawing.Point(0, 102);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 38);
-            this.panel4.TabIndex = 13;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Lavender;
-            this.panel5.Location = new System.Drawing.Point(0, 558);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 38);
-            this.panel5.TabIndex = 14;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Lavender;
-            this.panel6.Location = new System.Drawing.Point(0, 490);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 38);
-            this.panel6.TabIndex = 15;
-            // 
             // SearchStudTextBox
             // 
             this.SearchStudTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -300,6 +294,26 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.editProfileToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Logout";
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editProfileToolStripMenuItem.Text = "Edit Profile";
+            // 
             // StudInfoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,13 +322,12 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SearchStudTextBox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.SearchStudInfo);
             this.Controls.Add(this.DeleteStudInfo);
             this.Controls.Add(this.UpdateStudInfo);
             this.Controls.Add(this.AddStudInfo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataStudInfo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
@@ -323,9 +336,10 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataStudInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,18 +355,20 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataStudInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AddStudInfo;
         private System.Windows.Forms.Button UpdateStudInfo;
         private System.Windows.Forms.Button DeleteStudInfo;
         private System.Windows.Forms.Button SearchStudInfo;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox SearchStudTextBox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
     }
 }

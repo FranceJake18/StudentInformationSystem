@@ -1,6 +1,6 @@
 ﻿namespace StudentInformationSystem
 {
-    partial class LandingPage
+    partial class GradesPage
     {
         /// <summary>
         /// Required designer variable.
@@ -32,22 +32,29 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Announcements = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Attendance = new System.Windows.Forms.Button();
             this.StudInfo = new System.Windows.Forms.Button();
             this.Grades = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGrades = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SearchStudTextBox = new System.Windows.Forms.TextBox();
+            this.SearchGrade = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 61);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 7;
             // 
             // label1
             // 
@@ -82,23 +89,12 @@
             this.Announcements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Announcements.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Announcements.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Announcements.Location = new System.Drawing.Point(1013, 14);
+            this.Announcements.Location = new System.Drawing.Point(1008, 14);
             this.Announcements.Name = "Announcements";
             this.Announcements.Size = new System.Drawing.Size(194, 35);
             this.Announcements.TabIndex = 8;
             this.Announcements.Text = "Announcements";
             this.Announcements.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::StudentInformationSystem.Properties.Resources.free_user_icon_3296_thumb;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(1213, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Attendance
             // 
@@ -107,7 +103,7 @@
             this.Attendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Attendance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Attendance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Attendance.Location = new System.Drawing.Point(813, 14);
+            this.Attendance.Location = new System.Drawing.Point(808, 14);
             this.Attendance.Name = "Attendance";
             this.Attendance.Size = new System.Drawing.Size(194, 35);
             this.Attendance.TabIndex = 7;
@@ -121,7 +117,7 @@
             this.StudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StudInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.StudInfo.Location = new System.Drawing.Point(413, 14);
+            this.StudInfo.Location = new System.Drawing.Point(408, 14);
             this.StudInfo.Name = "StudInfo";
             this.StudInfo.Size = new System.Drawing.Size(194, 35);
             this.StudInfo.TabIndex = 5;
@@ -135,32 +131,12 @@
             this.Grades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Grades.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Grades.Location = new System.Drawing.Point(613, 14);
+            this.Grades.Location = new System.Drawing.Point(608, 14);
             this.Grades.Name = "Grades";
             this.Grades.Size = new System.Drawing.Size(194, 35);
             this.Grades.TabIndex = 6;
             this.Grades.Text = "Grades";
             this.Grades.UseVisualStyleBackColor = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.editProfileToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "Logout";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editProfileToolStripMenuItem.Text = "Edit Profile";
             // 
             // panel2
             // 
@@ -172,7 +148,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 621);
-            this.panel2.TabIndex = 6;
+            this.panel2.TabIndex = 8;
             // 
             // panel6
             // 
@@ -206,41 +182,140 @@
             this.panel3.Size = new System.Drawing.Size(200, 38);
             this.panel3.TabIndex = 12;
             // 
-            // LandingPage
+            // dataGrades
+            // 
+            this.dataGrades.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrades.GridColor = System.Drawing.Color.LavenderBlush;
+            this.dataGrades.Location = new System.Drawing.Point(212, 171);
+            this.dataGrades.Name = "dataGrades";
+            this.dataGrades.Size = new System.Drawing.Size(1040, 498);
+            this.dataGrades.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.label2.Location = new System.Drawing.Point(206, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 32);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Grades";
+            // 
+            // SearchStudTextBox
+            // 
+            this.SearchStudTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchStudTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchStudTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.SearchStudTextBox.Location = new System.Drawing.Point(863, 134);
+            this.SearchStudTextBox.Multiline = true;
+            this.SearchStudTextBox.Name = "SearchStudTextBox";
+            this.SearchStudTextBox.Size = new System.Drawing.Size(264, 31);
+            this.SearchStudTextBox.TabIndex = 14;
+            // 
+            // SearchGrade
+            // 
+            this.SearchGrade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchGrade.BackColor = System.Drawing.Color.LavenderBlush;
+            this.SearchGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchGrade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.SearchGrade.Location = new System.Drawing.Point(1133, 133);
+            this.SearchGrade.Name = "SearchGrade";
+            this.SearchGrade.Size = new System.Drawing.Size(119, 32);
+            this.SearchGrade.TabIndex = 16;
+            this.SearchGrade.Text = "Search";
+            this.SearchGrade.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::StudentInformationSystem.Properties.Resources.pngtree_vector_search_icon_png_image_320926;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(1088, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 31);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::StudentInformationSystem.Properties.Resources.free_user_icon_3296_thumb;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(1213, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.editProfileToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Logout";
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editProfileToolStripMenuItem.Text = "Edit Profile";
+            // 
+            // GradesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.SearchGrade);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.SearchStudTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGrades);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MaximizeBox = false;
-            this.Name = "LandingPage";
-            this.Text = "Landing Page";
+            this.Name = "GradesPage";
+            this.Text = "GradesPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button StudInfo;
         private System.Windows.Forms.Button Announcements;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Attendance;
+        private System.Windows.Forms.Button StudInfo;
         private System.Windows.Forms.Button Grades;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGrades;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox SearchStudTextBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button SearchGrade;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
     }
 }

@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnnouncementsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnnouncementsPage.Designer.cs">
+      <DependentUpon>AnnouncementsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendancePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendancePage.Designer.cs">
+      <DependentUpon>AttendancePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradesPage.Designer.cs">
+      <DependentUpon>GradesPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +96,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnnouncementsPage.resx">
+      <DependentUpon>AnnouncementsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendancePage.resx">
+      <DependentUpon>AttendancePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradesPage.resx">
+      <DependentUpon>GradesPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
