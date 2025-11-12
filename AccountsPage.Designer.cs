@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.StudinfoSystem = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.AccountList = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Savebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,15 +59,15 @@
             this.StudinfoSystem.TabIndex = 1;
             this.StudinfoSystem.Text = "Student Information System";
             // 
-            // listBox1
+            // AccountList
             // 
-            this.listBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 123);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(383, 276);
-            this.listBox1.TabIndex = 5;
+            this.AccountList.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountList.FormattingEnabled = true;
+            this.AccountList.ItemHeight = 16;
+            this.AccountList.Location = new System.Drawing.Point(12, 123);
+            this.AccountList.Name = "AccountList";
+            this.AccountList.Size = new System.Drawing.Size(383, 276);
+            this.AccountList.TabIndex = 5;
             // 
             // label2
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.AccountList);
             this.Controls.Add(this.panel1);
             this.Name = "AccountsPage";
             this.Text = "AccountsPage";
@@ -147,7 +147,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label StudinfoSystem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox AccountList;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button button1;
