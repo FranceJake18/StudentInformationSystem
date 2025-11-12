@@ -38,6 +38,10 @@ namespace StudentInformationSystem
 
         private void signin_Click(object sender, EventArgs e)
         {
+            string Password = PasswordtextBox.Text;
+            string Username = UserNametextBox.Text;
+
+
 
         }
 

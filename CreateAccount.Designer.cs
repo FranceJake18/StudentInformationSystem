@@ -154,9 +154,9 @@
             this.SignInCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.SignInCreate.Location = new System.Drawing.Point(210, 493);
+            this.SignInCreate.Location = new System.Drawing.Point(210, 325);
             this.SignInCreate.Name = "SignInCreate";
-            this.SignInCreate.Size = new System.Drawing.Size(181, 35);
+            this.SignInCreate.Size = new System.Drawing.Size(163, 35);
             this.SignInCreate.TabIndex = 9;
             this.SignInCreate.Text = "Sign In";
             this.SignInCreate.UseVisualStyleBackColor = false;
@@ -168,9 +168,9 @@
             this.SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.SignUp.Location = new System.Drawing.Point(393, 493);
+            this.SignUp.Location = new System.Drawing.Point(392, 325);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(181, 35);
+            this.SignUp.Size = new System.Drawing.Size(161, 35);
             this.SignUp.TabIndex = 10;
             this.SignUp.Text = "Sign Up";
             this.SignUp.UseVisualStyleBackColor = false;
