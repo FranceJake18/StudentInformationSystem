@@ -32,9 +32,9 @@
             this.StudinfoSystem = new System.Windows.Forms.Label();
             this.AccountList = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Savebtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddAcc = new System.Windows.Forms.Button();
+            this.DeleteAcc = new System.Windows.Forms.Button();
+            this.EditAcc = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,47 +80,47 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Accounts";
             // 
-            // Savebtn
+            // AddAcc
             // 
-            this.Savebtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Savebtn.BackColor = System.Drawing.Color.LavenderBlush;
-            this.Savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Savebtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Savebtn.Location = new System.Drawing.Point(12, 426);
-            this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(103, 29);
-            this.Savebtn.TabIndex = 20;
-            this.Savebtn.Text = "Add";
-            this.Savebtn.UseVisualStyleBackColor = false;
+            this.AddAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddAcc.BackColor = System.Drawing.Color.LavenderBlush;
+            this.AddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.AddAcc.Location = new System.Drawing.Point(12, 426);
+            this.AddAcc.Name = "AddAcc";
+            this.AddAcc.Size = new System.Drawing.Size(103, 29);
+            this.AddAcc.TabIndex = 20;
+            this.AddAcc.Text = "Add";
+            this.AddAcc.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // DeleteAcc
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.button1.Location = new System.Drawing.Point(12, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 29);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
+            this.DeleteAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DeleteAcc.BackColor = System.Drawing.Color.LavenderBlush;
+            this.DeleteAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.DeleteAcc.Location = new System.Drawing.Point(12, 461);
+            this.DeleteAcc.Name = "DeleteAcc";
+            this.DeleteAcc.Size = new System.Drawing.Size(103, 29);
+            this.DeleteAcc.TabIndex = 21;
+            this.DeleteAcc.Text = "Delete";
+            this.DeleteAcc.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // EditAcc
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.LavenderBlush;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.button2.Location = new System.Drawing.Point(12, 496);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 29);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.EditAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditAcc.BackColor = System.Drawing.Color.LavenderBlush;
+            this.EditAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.EditAcc.Location = new System.Drawing.Point(12, 496);
+            this.EditAcc.Name = "EditAcc";
+            this.EditAcc.Size = new System.Drawing.Size(103, 29);
+            this.EditAcc.TabIndex = 22;
+            this.EditAcc.Text = "Edit";
+            this.EditAcc.UseVisualStyleBackColor = false;
             // 
             // AccountsPage
             // 
@@ -128,9 +128,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(407, 539);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Savebtn);
+            this.Controls.Add(this.EditAcc);
+            this.Controls.Add(this.DeleteAcc);
+            this.Controls.Add(this.AddAcc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AccountList);
             this.Controls.Add(this.panel1);
@@ -149,8 +149,8 @@
         private System.Windows.Forms.Label StudinfoSystem;
         private System.Windows.Forms.ListBox AccountList;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Savebtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddAcc;
+        private System.Windows.Forms.Button DeleteAcc;
+        private System.Windows.Forms.Button EditAcc;
     }
 }
