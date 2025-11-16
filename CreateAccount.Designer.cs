@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.NotedPassswordError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -160,6 +161,7 @@
             this.SignInCreate.TabIndex = 9;
             this.SignInCreate.Text = "Sign In";
             this.SignInCreate.UseVisualStyleBackColor = false;
+            this.SignInCreate.Click += new System.EventHandler(this.SignInCreate_Click);
             // 
             // SignUp
             // 
@@ -281,12 +283,23 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Middle name:";
             // 
+            // NotedPassswordError
+            // 
+            this.NotedPassswordError.AutoSize = true;
+            this.NotedPassswordError.ForeColor = System.Drawing.Color.Red;
+            this.NotedPassswordError.Location = new System.Drawing.Point(370, 261);
+            this.NotedPassswordError.Name = "NotedPassswordError";
+            this.NotedPassswordError.Size = new System.Drawing.Size(0, 18);
+            this.NotedPassswordError.TabIndex = 21;
+            this.NotedPassswordError.Click += new System.EventHandler(this.label9_Click);
+            // 
             // CreateAccountPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.NotedPassswordError);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -340,5 +353,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label NotedPassswordError;
     }
 }

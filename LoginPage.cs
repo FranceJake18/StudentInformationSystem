@@ -28,7 +28,9 @@ namespace StudentInformationSystem
 
         private void CreateAccount_Click(object sender, EventArgs e)
         {
-
+            CreateAccountPage cap = new CreateAccountPage();
+            this.Hide();
+            cap.Show();
         }
 
         private void ForgotPass_Click(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace StudentInformationSystem
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void CreateAccc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
