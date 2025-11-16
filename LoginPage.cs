@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,8 @@ namespace StudentInformationSystem
         public loginPage()
         {
             InitializeComponent();
-          
+            
+
 
         }
 
@@ -43,8 +45,31 @@ namespace StudentInformationSystem
             string Password = PasswordtextBox.Text;
             string Username = UserNametextBox.Text;
 
+            String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionSQL))
+            {
+                connection.Open();
 
+                string log = "SELECT COUNT (*) FROM Registered_Accounts WHERE Username=@Username AND Password=@Password";
+            using (SqlCommand command = new SqlCommand(log, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", Username);
+                    command.Parameters.AddWithValue("@Password", Password);
 
+                    int result = (int)command.ExecuteScalar();
+
+                    if (result > 0)
+                    {
+                        LandingPage landing = new LandingPage();
+                        this.Hide();
+                        landing.Show();
+                    }
+                    else
+                    {
+                        ErrorMessage.Text = "Username and Password is incorrect";
+                    }
+                }
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -21,5 +21,10 @@ namespace StudentInformationSystem
         {
             contextMenuStrip1.Show(Cursor.Position);
         }
+
+        private void LandingPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

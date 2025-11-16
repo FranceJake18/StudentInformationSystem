@@ -63,5 +63,12 @@ namespace StudentInformationSystem
         {
 
         }
+
+        private void SignUp_Click(object sender, EventArgs e)
+        {
+            loginPage show = new loginPage();
+            this.Hide();
+            show.Show();
+        }
     }
 }
