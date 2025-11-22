@@ -29,7 +29,7 @@ namespace StudentInformationSystem
 
             if (Password == CPassword)
             {
-                String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; Integrated Security=True;";
+                String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
                 using (SqlConnection connection = new SqlConnection(connectionSQL))
                 {
                     connection.Open();
@@ -69,6 +69,11 @@ namespace StudentInformationSystem
             loginPage show = new loginPage();
             this.Hide();
             show.Show();
+        }
+
+        private void CreateAccountPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

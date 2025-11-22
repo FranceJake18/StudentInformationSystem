@@ -44,8 +44,8 @@ namespace StudentInformationSystem
         {
             string Password = PasswordtextBox.Text;
             string Username = UserNametextBox.Text;
-
-            String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; Integrated Security=True;";
+           
+            String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
             using (SqlConnection connection = new SqlConnection(connectionSQL))
             {
                 connection.Open();

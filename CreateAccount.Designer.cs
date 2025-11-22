@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -65,7 +65,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
@@ -77,7 +77,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +90,7 @@
             // 
             // UserNameCreate
             // 
-            this.UserNameCreate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UserNameCreate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.UserNameCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.UserNameCreate.Location = new System.Drawing.Point(210, 162);
@@ -101,7 +101,7 @@
             // 
             // PasswordCreate
             // 
-            this.PasswordCreate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PasswordCreate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PasswordCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.PasswordCreate.Location = new System.Drawing.Point(210, 224);
@@ -113,7 +113,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +126,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,7 +139,7 @@
             // 
             // ConfirmPassword
             // 
-            this.ConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ConfirmPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.ConfirmPassword.Location = new System.Drawing.Point(210, 284);
@@ -151,12 +151,12 @@
             // 
             // SignInCreate
             // 
-            this.SignInCreate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SignInCreate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SignInCreate.BackColor = System.Drawing.Color.LavenderBlush;
             this.SignInCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.SignInCreate.Location = new System.Drawing.Point(211, 526);
+            this.SignInCreate.Location = new System.Drawing.Point(211, 502);
             this.SignInCreate.Name = "SignInCreate";
             this.SignInCreate.Size = new System.Drawing.Size(363, 35);
             this.SignInCreate.TabIndex = 9;
@@ -166,14 +166,14 @@
             // 
             // SignUp
             // 
-            this.SignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SignUp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SignUp.BackColor = System.Drawing.Color.LavenderBlush;
             this.SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.SignUp.Location = new System.Drawing.Point(211, 570);
+            this.SignUp.Location = new System.Drawing.Point(211, 542);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(361, 35);
+            this.SignUp.Size = new System.Drawing.Size(363, 35);
             this.SignUp.TabIndex = 10;
             this.SignUp.Text = "Log In";
             this.SignUp.UseVisualStyleBackColor = false;
@@ -181,7 +181,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackgroundImage = global::StudentInformationSystem.Properties.Resources._1199277_200;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(165, 224);
@@ -192,7 +192,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::StudentInformationSystem.Properties.Resources.free_user_icon_3296_thumb;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(165, 162);
@@ -203,7 +203,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
@@ -215,7 +215,7 @@
             // 
             // FirstNCreateAcc
             // 
-            this.FirstNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FirstNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FirstNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.FirstNCreateAcc.Location = new System.Drawing.Point(210, 343);
@@ -227,7 +227,7 @@
             // 
             // LastNCreateAcc
             // 
-            this.LastNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LastNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LastNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.LastNCreateAcc.Location = new System.Drawing.Point(211, 401);
@@ -239,7 +239,7 @@
             // 
             // MiddleNCreateAcc
             // 
-            this.MiddleNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MiddleNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MiddleNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.MiddleNCreateAcc.Location = new System.Drawing.Point(211, 458);
@@ -251,7 +251,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,7 +264,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,7 +277,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +290,7 @@
             // 
             // NotedPassswordError
             // 
-            this.NotedPassswordError.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NotedPassswordError.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.NotedPassswordError.AutoSize = true;
             this.NotedPassswordError.ForeColor = System.Drawing.Color.Red;
             this.NotedPassswordError.Location = new System.Drawing.Point(370, 263);
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 665);
+            this.ClientSize = new System.Drawing.Size(784, 610);
             this.Controls.Add(this.NotedPassswordError);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -328,7 +328,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "CreateAccountPage";
-            this.Text = "CreateAccount Page";
+            this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.CreateAccountPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
