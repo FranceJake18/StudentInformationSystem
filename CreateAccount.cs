@@ -27,38 +27,100 @@ namespace StudentInformationSystem
             string LName = LastNCreateAcc.Text;
             string MName = MiddleNCreateAcc.Text;
 
-            if (Password == CPassword)
-            {
-                String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
-                using (SqlConnection connection = new SqlConnection(connectionSQL))
-                {
-                    connection.Open();
-                    string AddAcc = @"INSERT INTO Registered_Accounts(Username, Password, First_Name, Last_Name, Middle_Name) VALUES (@Username, @Password, @FName, @LName, @MName)";
-                    using (SqlCommand cmd = new SqlCommand(AddAcc, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@Username", Username);
-                        cmd.Parameters.AddWithValue("@Password", Password);
-                        cmd.Parameters.AddWithValue("@FName", FName);
-                        cmd.Parameters.AddWithValue("@LName", LName);
-                        cmd.Parameters.AddWithValue("@MName", MName);
+            UsenameLabel.Text = "";
+            PasswordLabel.Text = "";
+            NotedPassswordError.Text = "";
+            FNameLabel.Text = "";
+            LNameLabel.Text = "";
+            MNameLabel.Text = "";
 
-                        int result = cmd.ExecuteNonQuery();
-                        if (result > 0)
+            if (Username == "") 
+            {
+                UsenameLabel.Text = "The Username is Empty";
+            } 
+            if (Password == "") 
+            {
+                PasswordLabel.Text = "The Password is Empty";
+            }
+            if (CPassword == "") 
+            {
+                NotedPassswordError.Text = "The Confirm password is Empty";
+            } 
+            if (FName == "") 
+            {
+                FNameLabel.Text = "The First Name is Empty";
+            } 
+            if (LName == "")
+            {
+                LNameLabel.Text = "The Last Name is Empty";
+            }
+           
+
+            if (Username.Length > 0 && Password.Length > 0 && CPassword.Length > 0 && FName.Length > 0 && LName.Length > 0)
+            {
+               
+                if (Password.Length >= 8 && Password.Length < 16)
+                    {
+
+                    if (Password == CPassword)
+                    {
+
+                        String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
+                        using (SqlConnection connection = new SqlConnection(connectionSQL))
                         {
-                            MessageBox.Show("Account Created");
+                            connection.Open();
+                            string AddAcc = @"INSERT INTO Registered_Accounts(Username, Password, First_Name, Last_Name, Middle_Name) VALUES (@Username, @Password, @FName, @LName, @MName)";
+                            using (SqlCommand cmd = new SqlCommand(AddAcc, connection))
+                            {
+                                cmd.Parameters.AddWithValue("@Username", Username);
+                                cmd.Parameters.AddWithValue("@Password", Password);
+                                cmd.Parameters.AddWithValue("@FName", FName);
+                                cmd.Parameters.AddWithValue("@LName", LName);
+                                cmd.Parameters.AddWithValue("@MName", MName);
+
+                                int result = cmd.ExecuteNonQuery();
+
+                                string log = "SELECT COUNT (*) FROM Registered_Accounts WHERE Username=@Username";
+                                using (SqlCommand command = new SqlCommand(log, connection))
+                                {
+                                    command.Parameters.AddWithValue("@Username", Username);
+                                    
+                                    int res = (int)command.ExecuteScalar();
+
+                                    if (res == 0)
+                                    {
+                                        if (result > 0)
+                                        {
+                                            MessageBox.Show("Account Created");
+                                        }
+                                    }
+                                    else if (res > 0)
+                                    {
+                                            MessageBox.Show("Account exist create new one");
+                                    }
+
+                                }
+
+                            }
+
                         }
                     }
-                   
+                    else if (Password != CPassword)
+                    {
+                        NotedPassswordError.Text = "Password does not match";
+                    }
+                }
+                else
+                {
+                    PasswordLabel.Text = "Password must consist of 8-16 letters";
                 }
 
 
             }
-            else if (Password != FName)
-            {
-                NotedPassswordError.Text = "Password does not match";
-            }
-        }
+            
 
+        }
+            
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +134,26 @@ namespace StudentInformationSystem
         }
 
         private void CreateAccountPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsenameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
