@@ -60,7 +60,7 @@ namespace StudentInformationSystem
 
                     if (result > 0)
                     {
-                        LandingPage landing = new LandingPage();
+                        StudInfoPage landing = new StudInfoPage();
                         this.Hide();
                         landing.Show();
                     }

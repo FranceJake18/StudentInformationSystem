@@ -1,6 +1,6 @@
 ﻿namespace StudentInformationSystem
 {
-    partial class AddStudentInformation
+    partial class ProgramError
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BirthDTP = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
+            this.FirstName = new System.Windows.Forms.Label();
+            this.LastName = new System.Windows.Forms.Label();
+            this.StudentNoError = new System.Windows.Forms.Label();
+            this.ProgramE = new System.Windows.Forms.Label();
+            this.GenderError = new System.Windows.Forms.Label();
+            this.AgeError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +70,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
@@ -80,7 +87,7 @@
             this.Cancelbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancelbtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Cancelbtn.Location = new System.Drawing.Point(267, 470);
+            this.Cancelbtn.Location = new System.Drawing.Point(267, 442);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Size = new System.Drawing.Size(119, 32);
             this.Cancelbtn.TabIndex = 9;
@@ -94,12 +101,13 @@
             this.Savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Savebtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Savebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Savebtn.Location = new System.Drawing.Point(392, 470);
+            this.Savebtn.Location = new System.Drawing.Point(392, 442);
             this.Savebtn.Name = "Savebtn";
             this.Savebtn.Size = new System.Drawing.Size(119, 32);
             this.Savebtn.TabIndex = 10;
             this.Savebtn.Text = "Save";
             this.Savebtn.UseVisualStyleBackColor = false;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // FirstN
             // 
@@ -158,6 +166,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
@@ -287,6 +296,7 @@
             // 
             // BirthDTP
             // 
+            this.BirthDTP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BirthDTP.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthDTP.Location = new System.Drawing.Point(392, 319);
             this.BirthDTP.Name = "BirthDTP";
@@ -306,12 +316,84 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Birthdate:";
             // 
-            // AddStudentInformation
+            // FirstName
+            // 
+            this.FirstName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FirstName.AutoSize = true;
+            this.FirstName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstName.ForeColor = System.Drawing.Color.Red;
+            this.FirstName.Location = new System.Drawing.Point(113, 164);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(0, 16);
+            this.FirstName.TabIndex = 31;
+            // 
+            // LastName
+            // 
+            this.LastName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LastName.AutoSize = true;
+            this.LastName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastName.ForeColor = System.Drawing.Color.Red;
+            this.LastName.Location = new System.Drawing.Point(113, 232);
+            this.LastName.Name = "LastName";
+            this.LastName.Size = new System.Drawing.Size(0, 16);
+            this.LastName.TabIndex = 32;
+            // 
+            // StudentNoError
+            // 
+            this.StudentNoError.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.StudentNoError.AutoSize = true;
+            this.StudentNoError.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentNoError.ForeColor = System.Drawing.Color.Red;
+            this.StudentNoError.Location = new System.Drawing.Point(113, 362);
+            this.StudentNoError.Name = "StudentNoError";
+            this.StudentNoError.Size = new System.Drawing.Size(0, 16);
+            this.StudentNoError.TabIndex = 33;
+            // 
+            // ProgramE
+            // 
+            this.ProgramE.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProgramE.AutoSize = true;
+            this.ProgramE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramE.ForeColor = System.Drawing.Color.Red;
+            this.ProgramE.Location = new System.Drawing.Point(466, 164);
+            this.ProgramE.Name = "ProgramE";
+            this.ProgramE.Size = new System.Drawing.Size(0, 16);
+            this.ProgramE.TabIndex = 34;
+            // 
+            // GenderError
+            // 
+            this.GenderError.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.GenderError.AutoSize = true;
+            this.GenderError.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderError.ForeColor = System.Drawing.Color.Red;
+            this.GenderError.Location = new System.Drawing.Point(455, 231);
+            this.GenderError.Name = "GenderError";
+            this.GenderError.Size = new System.Drawing.Size(0, 16);
+            this.GenderError.TabIndex = 35;
+            // 
+            // AgeError
+            // 
+            this.AgeError.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AgeError.AutoSize = true;
+            this.AgeError.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeError.ForeColor = System.Drawing.Color.Red;
+            this.AgeError.Location = new System.Drawing.Point(431, 362);
+            this.AgeError.Name = "AgeError";
+            this.AgeError.Size = new System.Drawing.Size(0, 16);
+            this.AgeError.TabIndex = 36;
+            // 
+            // ProgramError
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 513);
+            this.Controls.Add(this.AgeError);
+            this.Controls.Add(this.GenderError);
+            this.Controls.Add(this.ProgramE);
+            this.Controls.Add(this.StudentNoError);
+            this.Controls.Add(this.LastName);
+            this.Controls.Add(this.FirstName);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BirthDTP);
             this.Controls.Add(this.label9);
@@ -332,8 +414,9 @@
             this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.panel1);
-            this.Name = "AddStudentInformation";
+            this.Name = "ProgramError";
             this.Text = "AddStudentInformation";
+            this.Load += new System.EventHandler(this.AddStudentInformation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -364,5 +447,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker BirthDTP;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label FirstName;
+        private System.Windows.Forms.Label LastName;
+        private System.Windows.Forms.Label StudentNoError;
+        private System.Windows.Forms.Label ProgramE;
+        private System.Windows.Forms.Label GenderError;
+        private System.Windows.Forms.Label AgeError;
     }
 }

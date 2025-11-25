@@ -158,6 +158,7 @@
             this.StudInfo.TabIndex = 5;
             this.StudInfo.Text = "Student Info";
             this.StudInfo.UseVisualStyleBackColor = false;
+            this.StudInfo.Click += new System.EventHandler(this.StudInfo_Click);
             // 
             // panel1
             // 
@@ -196,6 +197,8 @@
             // 
             // dataStudInfo
             // 
+            this.dataStudInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataStudInfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataStudInfo.BackgroundColor = System.Drawing.Color.Snow;
             this.dataStudInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataStudInfo.GridColor = System.Drawing.Color.LavenderBlush;
@@ -229,6 +232,7 @@
             this.AddStudInfo.TabIndex = 8;
             this.AddStudInfo.Text = "Add";
             this.AddStudInfo.UseVisualStyleBackColor = false;
+            this.AddStudInfo.Click += new System.EventHandler(this.AddStudInfo_Click);
             // 
             // DeleteStudInfo
             // 
@@ -258,23 +262,25 @@
             this.SearchStudInfo.TabIndex = 11;
             this.SearchStudInfo.Text = "Search";
             this.SearchStudInfo.UseVisualStyleBackColor = false;
+            this.SearchStudInfo.Click += new System.EventHandler(this.SearchStudInfo_Click_1);
             // 
             // SearchStudTextBox
             // 
             this.SearchStudTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SearchStudTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchStudTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.SearchStudTextBox.Location = new System.Drawing.Point(863, 134);
+            this.SearchStudTextBox.Location = new System.Drawing.Point(868, 134);
             this.SearchStudTextBox.Multiline = true;
             this.SearchStudTextBox.Name = "SearchStudTextBox";
-            this.SearchStudTextBox.Size = new System.Drawing.Size(264, 31);
+            this.SearchStudTextBox.Size = new System.Drawing.Size(218, 31);
             this.SearchStudTextBox.TabIndex = 12;
+            this.SearchStudTextBox.TextChanged += new System.EventHandler(this.SearchStudTextBox_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::StudentInformationSystem.Properties.Resources.pngtree_vector_search_icon_png_image_320926;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(1088, 134);
+            this.pictureBox2.Location = new System.Drawing.Point(1087, 134);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 31);
             this.pictureBox2.TabIndex = 13;
@@ -290,12 +296,14 @@
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.toolStripMenuItem1.Text = "Logout";
             // 
             // editProfileToolStripMenuItem
             // 
+            this.editProfileToolStripMenuItem.Enabled = false;
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
             this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.editProfileToolStripMenuItem.Text = "Edit Profile";
@@ -318,6 +326,7 @@
             this.MaximizeBox = false;
             this.Name = "StudInfoPage";
             this.Text = "Student Information Page";
+            this.Load += new System.EventHandler(this.StudInfoPage_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

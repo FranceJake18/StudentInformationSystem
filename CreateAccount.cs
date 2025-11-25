@@ -27,30 +27,23 @@ namespace StudentInformationSystem
             string LName = LastNCreateAcc.Text;
             string MName = MiddleNCreateAcc.Text;
 
-            UsenameLabel.Text = "";
-            PasswordLabel.Text = "";
-            NotedPassswordError.Text = "";
-            FNameLabel.Text = "";
-            LNameLabel.Text = "";
-            MNameLabel.Text = "";
-
-            if (Username == "") 
+            if (string.IsNullOrWhiteSpace(Username))
             {
                 UsenameLabel.Text = "The Username is Empty";
             } 
-            if (Password == "") 
+            if (string.IsNullOrWhiteSpace(Password))
             {
                 PasswordLabel.Text = "The Password is Empty";
             }
-            if (CPassword == "") 
+            if (string.IsNullOrWhiteSpace(CPassword))
             {
                 NotedPassswordError.Text = "The Confirm password is Empty";
             } 
-            if (FName == "") 
+            if (string.IsNullOrWhiteSpace(FName))
             {
                 FNameLabel.Text = "The First Name is Empty";
             } 
-            if (LName == "")
+            if (string.IsNullOrWhiteSpace(LName))
             {
                 LNameLabel.Text = "The Last Name is Empty";
             }
@@ -97,6 +90,7 @@ namespace StudentInformationSystem
                                     else if (res > 0)
                                     {
                                             MessageBox.Show("Account exist create new one");
+                                        
                                     }
 
                                 }
@@ -135,6 +129,7 @@ namespace StudentInformationSystem
 
         private void CreateAccountPage_Load(object sender, EventArgs e)
         {
+            
 
         }
 
