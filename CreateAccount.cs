@@ -71,7 +71,7 @@ namespace StudentInformationSystem
                                 cmd.Parameters.AddWithValue("@LName", LName);
                                 cmd.Parameters.AddWithValue("@MName", MName);
 
-                                int result = cmd.ExecuteNonQuery();
+                                
 
                                 string log = "SELECT COUNT (*) FROM Registered_Accounts WHERE Username=@Username";
                                 using (SqlCommand command = new SqlCommand(log, connection))
@@ -82,6 +82,7 @@ namespace StudentInformationSystem
 
                                     if (res == 0)
                                     {
+                                        int result = cmd.ExecuteNonQuery();
                                         if (result > 0)
                                         {
                                             MessageBox.Show("Account Created");
