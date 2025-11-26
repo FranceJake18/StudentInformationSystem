@@ -116,9 +116,8 @@
             this.FirstN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.FirstN.Location = new System.Drawing.Point(23, 184);
-            this.FirstN.Multiline = true;
             this.FirstN.Name = "FirstN";
-            this.FirstN.Size = new System.Drawing.Size(363, 31);
+            this.FirstN.Size = new System.Drawing.Size(363, 26);
             this.FirstN.TabIndex = 11;
             // 
             // LastN
@@ -127,9 +126,8 @@
             this.LastN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.LastN.Location = new System.Drawing.Point(23, 251);
-            this.LastN.Multiline = true;
             this.LastN.Name = "LastN";
-            this.LastN.Size = new System.Drawing.Size(363, 31);
+            this.LastN.Size = new System.Drawing.Size(363, 26);
             this.LastN.TabIndex = 12;
             // 
             // MidN
@@ -138,9 +136,8 @@
             this.MidN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MidN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.MidN.Location = new System.Drawing.Point(23, 317);
-            this.MidN.Multiline = true;
             this.MidN.Name = "MidN";
-            this.MidN.Size = new System.Drawing.Size(363, 31);
+            this.MidN.Size = new System.Drawing.Size(363, 26);
             this.MidN.TabIndex = 13;
             // 
             // StudNum
@@ -149,9 +146,8 @@
             this.StudNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.StudNum.Location = new System.Drawing.Point(23, 382);
-            this.StudNum.Multiline = true;
             this.StudNum.Name = "StudNum";
-            this.StudNum.Size = new System.Drawing.Size(363, 31);
+            this.StudNum.Size = new System.Drawing.Size(363, 26);
             this.StudNum.TabIndex = 14;
             // 
             // AgeB
@@ -160,9 +156,8 @@
             this.AgeB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.AgeB.Location = new System.Drawing.Point(392, 382);
-            this.AgeB.Multiline = true;
             this.AgeB.Name = "AgeB";
-            this.AgeB.Size = new System.Drawing.Size(363, 31);
+            this.AgeB.Size = new System.Drawing.Size(363, 26);
             this.AgeB.TabIndex = 18;
             // 
             // label2
@@ -180,15 +175,15 @@
             // ProgramCB
             // 
             this.ProgramCB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ProgramCB.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramCB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgramCB.FormattingEnabled = true;
             this.ProgramCB.Items.AddRange(new object[] {
             "BS Information Technology",
             "BS Computer Science",
             "BS Hospitality Management"});
-            this.ProgramCB.Location = new System.Drawing.Point(392, 185);
+            this.ProgramCB.Location = new System.Drawing.Point(392, 184);
             this.ProgramCB.Name = "ProgramCB";
-            this.ProgramCB.Size = new System.Drawing.Size(363, 30);
+            this.ProgramCB.Size = new System.Drawing.Size(363, 26);
             this.ProgramCB.TabIndex = 20;
             // 
             // label3
@@ -272,14 +267,14 @@
             // GenderCB
             // 
             this.GenderCB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GenderCB.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderCB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenderCB.FormattingEnabled = true;
             this.GenderCB.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.GenderCB.Location = new System.Drawing.Point(392, 252);
+            this.GenderCB.Location = new System.Drawing.Point(392, 251);
             this.GenderCB.Name = "GenderCB";
-            this.GenderCB.Size = new System.Drawing.Size(363, 30);
+            this.GenderCB.Size = new System.Drawing.Size(363, 26);
             this.GenderCB.TabIndex = 27;
             // 
             // label9
@@ -298,10 +293,10 @@
             // BirthDTP
             // 
             this.BirthDTP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BirthDTP.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthDTP.Location = new System.Drawing.Point(392, 319);
+            this.BirthDTP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthDTP.Location = new System.Drawing.Point(392, 317);
             this.BirthDTP.Name = "BirthDTP";
-            this.BirthDTP.Size = new System.Drawing.Size(363, 29);
+            this.BirthDTP.Size = new System.Drawing.Size(363, 26);
             this.BirthDTP.TabIndex = 29;
             // 
             // label10

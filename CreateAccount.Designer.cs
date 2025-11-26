@@ -100,9 +100,8 @@
             this.UserNameCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.UserNameCreate.Location = new System.Drawing.Point(212, 162);
-            this.UserNameCreate.Multiline = true;
             this.UserNameCreate.Name = "UserNameCreate";
-            this.UserNameCreate.Size = new System.Drawing.Size(362, 31);
+            this.UserNameCreate.Size = new System.Drawing.Size(362, 26);
             this.UserNameCreate.TabIndex = 4;
             // 
             // PasswordCreate
@@ -111,9 +110,8 @@
             this.PasswordCreate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.PasswordCreate.Location = new System.Drawing.Point(212, 220);
-            this.PasswordCreate.Multiline = true;
             this.PasswordCreate.Name = "PasswordCreate";
-            this.PasswordCreate.Size = new System.Drawing.Size(362, 31);
+            this.PasswordCreate.Size = new System.Drawing.Size(362, 26);
             this.PasswordCreate.TabIndex = 5;
             this.PasswordCreate.UseSystemPasswordChar = true;
             // 
@@ -150,9 +148,8 @@
             this.ConfirmPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.ConfirmPassword.Location = new System.Drawing.Point(212, 278);
-            this.ConfirmPassword.Multiline = true;
             this.ConfirmPassword.Name = "ConfirmPassword";
-            this.ConfirmPassword.Size = new System.Drawing.Size(362, 31);
+            this.ConfirmPassword.Size = new System.Drawing.Size(362, 26);
             this.ConfirmPassword.TabIndex = 8;
             this.ConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -191,7 +188,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackgroundImage = global::StudentInformationSystem.Properties.Resources._1199277_200;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(165, 220);
+            this.pictureBox2.Location = new System.Drawing.Point(165, 217);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 31);
             this.pictureBox2.TabIndex = 12;
@@ -202,7 +199,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::StudentInformationSystem.Properties.Resources.free_user_icon_3296_thumb;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(165, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(165, 159);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 31);
             this.pictureBox1.TabIndex = 11;
@@ -225,10 +222,9 @@
             this.FirstNCreateAcc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FirstNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.FirstNCreateAcc.Location = new System.Drawing.Point(212, 336);
-            this.FirstNCreateAcc.Multiline = true;
+            this.FirstNCreateAcc.Location = new System.Drawing.Point(211, 334);
             this.FirstNCreateAcc.Name = "FirstNCreateAcc";
-            this.FirstNCreateAcc.Size = new System.Drawing.Size(362, 31);
+            this.FirstNCreateAcc.Size = new System.Drawing.Size(362, 26);
             this.FirstNCreateAcc.TabIndex = 15;
             this.FirstNCreateAcc.UseSystemPasswordChar = true;
             // 
@@ -238,9 +234,8 @@
             this.LastNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.LastNCreateAcc.Location = new System.Drawing.Point(212, 394);
-            this.LastNCreateAcc.Multiline = true;
             this.LastNCreateAcc.Name = "LastNCreateAcc";
-            this.LastNCreateAcc.Size = new System.Drawing.Size(362, 31);
+            this.LastNCreateAcc.Size = new System.Drawing.Size(362, 26);
             this.LastNCreateAcc.TabIndex = 16;
             this.LastNCreateAcc.UseSystemPasswordChar = true;
             // 
@@ -250,9 +245,8 @@
             this.MiddleNCreateAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNCreateAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.MiddleNCreateAcc.Location = new System.Drawing.Point(211, 452);
-            this.MiddleNCreateAcc.Multiline = true;
             this.MiddleNCreateAcc.Name = "MiddleNCreateAcc";
-            this.MiddleNCreateAcc.Size = new System.Drawing.Size(363, 31);
+            this.MiddleNCreateAcc.Size = new System.Drawing.Size(363, 26);
             this.MiddleNCreateAcc.TabIndex = 17;
             this.MiddleNCreateAcc.UseSystemPasswordChar = true;
             // 

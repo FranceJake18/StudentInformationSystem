@@ -75,10 +75,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PasswordtextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordtextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.PasswordtextBox.Location = new System.Drawing.Point(210, 223);
-            this.PasswordtextBox.Multiline = true;
+            this.PasswordtextBox.Location = new System.Drawing.Point(210, 226);
             this.PasswordtextBox.Name = "PasswordtextBox";
-            this.PasswordtextBox.Size = new System.Drawing.Size(363, 31);
+            this.PasswordtextBox.PasswordChar = '*';
+            this.PasswordtextBox.Size = new System.Drawing.Size(363, 26);
             this.PasswordtextBox.TabIndex = 2;
             this.PasswordtextBox.UseSystemPasswordChar = true;
             this.PasswordtextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -120,10 +120,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserNametextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNametextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.UserNametextBox.Location = new System.Drawing.Point(210, 161);
-            this.UserNametextBox.Multiline = true;
+            this.UserNametextBox.Location = new System.Drawing.Point(210, 164);
             this.UserNametextBox.Name = "UserNametextBox";
-            this.UserNametextBox.Size = new System.Drawing.Size(363, 31);
+            this.UserNametextBox.Size = new System.Drawing.Size(363, 26);
             this.UserNametextBox.TabIndex = 1;
             // 
             // signin
@@ -135,7 +134,7 @@
             this.signin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.signin.Location = new System.Drawing.Point(210, 287);
+            this.signin.Location = new System.Drawing.Point(210, 282);
             this.signin.Name = "signin";
             this.signin.Size = new System.Drawing.Size(363, 35);
             this.signin.TabIndex = 4;
@@ -178,7 +177,7 @@
             this.CreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccount.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.CreateAccount.Location = new System.Drawing.Point(207, 329);
+            this.CreateAccount.Location = new System.Drawing.Point(207, 320);
             this.CreateAccount.Name = "CreateAccount";
             this.CreateAccount.Size = new System.Drawing.Size(156, 16);
             this.CreateAccount.TabIndex = 5;
@@ -192,11 +191,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ErrorMessage.AutoSize = true;
             this.ErrorMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ErrorMessage.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorMessage.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorMessage.ForeColor = System.Drawing.Color.Red;
-            this.ErrorMessage.Location = new System.Drawing.Point(242, 262);
+            this.ErrorMessage.Location = new System.Drawing.Point(276, 257);
             this.ErrorMessage.Name = "ErrorMessage";
-            this.ErrorMessage.Size = new System.Drawing.Size(0, 19);
+            this.ErrorMessage.Size = new System.Drawing.Size(0, 20);
             this.ErrorMessage.TabIndex = 8;
             // 
             // loginPage

@@ -13,7 +13,7 @@ namespace StudentInformationSystem
 {
     public partial class StudInfoPage : Form
     {
-        String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
+        String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
         public StudInfoPage()
         {
             InitializeComponent();

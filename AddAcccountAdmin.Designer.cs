@@ -140,10 +140,9 @@
             this.Password.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.Password.Location = new System.Drawing.Point(216, 207);
-            this.Password.Multiline = true;
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(363, 31);
+            this.Password.Size = new System.Drawing.Size(363, 26);
             this.Password.TabIndex = 43;
             this.Password.UseSystemPasswordChar = true;
             // 
@@ -153,9 +152,8 @@
             this.MidN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MidN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.MidN.Location = new System.Drawing.Point(216, 375);
-            this.MidN.Multiline = true;
             this.MidN.Name = "MidN";
-            this.MidN.Size = new System.Drawing.Size(363, 31);
+            this.MidN.Size = new System.Drawing.Size(363, 26);
             this.MidN.TabIndex = 42;
             // 
             // LastN
@@ -164,9 +162,8 @@
             this.LastN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.LastN.Location = new System.Drawing.Point(216, 319);
-            this.LastN.Multiline = true;
             this.LastN.Name = "LastN";
-            this.LastN.Size = new System.Drawing.Size(363, 31);
+            this.LastN.Size = new System.Drawing.Size(363, 26);
             this.LastN.TabIndex = 41;
             // 
             // FirstN
@@ -175,9 +172,8 @@
             this.FirstN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.FirstN.Location = new System.Drawing.Point(216, 263);
-            this.FirstN.Multiline = true;
             this.FirstN.Name = "FirstN";
-            this.FirstN.Size = new System.Drawing.Size(363, 31);
+            this.FirstN.Size = new System.Drawing.Size(363, 26);
             this.FirstN.TabIndex = 40;
             // 
             // Savebtn
@@ -275,9 +271,8 @@
             this.Username.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.Username.Location = new System.Drawing.Point(216, 151);
-            this.Username.Multiline = true;
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(363, 31);
+            this.Username.Size = new System.Drawing.Size(363, 26);
             this.Username.TabIndex = 60;
             // 
             // AddAcccountAdmin

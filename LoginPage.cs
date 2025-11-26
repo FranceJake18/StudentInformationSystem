@@ -16,9 +16,16 @@ namespace StudentInformationSystem
         public loginPage()
         {
             InitializeComponent();
-            
+            loadpage();
 
 
+        }
+
+        public void loadpage()
+        {
+            PasswordtextBox.UseSystemPasswordChar = true;
+            PasswordtextBox.PasswordChar = '*';
+            PasswordtextBox.MaxLength = 20;
         }
 
         private void loginPage_Load(object sender, EventArgs e)
@@ -45,7 +52,7 @@ namespace StudentInformationSystem
             string Password = PasswordtextBox.Text;
             string Username = UserNametextBox.Text;
            
-            String connectionSQL = "data source=192.168.1.5\\MSSQLSERVER,1433; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
+            String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
             using (SqlConnection connection = new SqlConnection(connectionSQL))
             {
                 connection.Open();
