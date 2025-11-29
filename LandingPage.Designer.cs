@@ -347,6 +347,7 @@
             this.MaximizeBox = false;
             this.Name = "LandingPage";
             this.Text = "Landing Page";
+            this.Load += new System.EventHandler(this.LandingPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);

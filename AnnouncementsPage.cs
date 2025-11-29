@@ -34,6 +34,10 @@ namespace StudentInformationSystem
             richTextBox1.Text = listBox1.SelectedItem.ToString();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

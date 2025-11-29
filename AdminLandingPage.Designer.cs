@@ -1,6 +1,6 @@
 ﻿namespace StudentInformationSystem
 {
-    partial class AdminLandingPage
+    partial class AddAccInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -41,10 +41,19 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchAccTextBox = new System.Windows.Forms.TextBox();
+            this.SearchAccInfo = new System.Windows.Forms.Button();
+            this.DeleteAccInfo = new System.Windows.Forms.Button();
+            this.AddStudInfo = new System.Windows.Forms.Button();
+            this.EditAccInfo = new System.Windows.Forms.Button();
+            this.dataAccinfo = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAccinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +93,7 @@
             this.Accounts.TabIndex = 6;
             this.Accounts.Text = "Accounts";
             this.Accounts.UseVisualStyleBackColor = false;
+            this.Accounts.Click += new System.EventHandler(this.Accounts_Click);
             // 
             // MainPage
             // 
@@ -163,6 +173,97 @@
             this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.editProfileToolStripMenuItem.Text = "Edit Profile";
             // 
+            // SearchAccTextBox
+            // 
+            this.SearchAccTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchAccTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchAccTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.SearchAccTextBox.Location = new System.Drawing.Point(872, 70);
+            this.SearchAccTextBox.Multiline = true;
+            this.SearchAccTextBox.Name = "SearchAccTextBox";
+            this.SearchAccTextBox.Size = new System.Drawing.Size(218, 31);
+            this.SearchAccTextBox.TabIndex = 17;
+            // 
+            // SearchAccInfo
+            // 
+            this.SearchAccInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchAccInfo.BackColor = System.Drawing.Color.LavenderBlush;
+            this.SearchAccInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchAccInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchAccInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.SearchAccInfo.Location = new System.Drawing.Point(1137, 69);
+            this.SearchAccInfo.Name = "SearchAccInfo";
+            this.SearchAccInfo.Size = new System.Drawing.Size(119, 32);
+            this.SearchAccInfo.TabIndex = 16;
+            this.SearchAccInfo.Text = "Search";
+            this.SearchAccInfo.UseVisualStyleBackColor = false;
+            this.SearchAccInfo.Click += new System.EventHandler(this.SearchAccInfo_Click);
+            // 
+            // DeleteAccInfo
+            // 
+            this.DeleteAccInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DeleteAccInfo.BackColor = System.Drawing.Color.LavenderBlush;
+            this.DeleteAccInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAccInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAccInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.DeleteAccInfo.Location = new System.Drawing.Point(746, 69);
+            this.DeleteAccInfo.Name = "DeleteAccInfo";
+            this.DeleteAccInfo.Size = new System.Drawing.Size(119, 32);
+            this.DeleteAccInfo.TabIndex = 15;
+            this.DeleteAccInfo.Text = "Delete";
+            this.DeleteAccInfo.UseVisualStyleBackColor = false;
+            this.DeleteAccInfo.Click += new System.EventHandler(this.DeleteAccInfo_Click);
+            // 
+            // AddStudInfo
+            // 
+            this.AddStudInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddStudInfo.BackColor = System.Drawing.Color.LavenderBlush;
+            this.AddStudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddStudInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.AddStudInfo.Location = new System.Drawing.Point(496, 69);
+            this.AddStudInfo.Name = "AddStudInfo";
+            this.AddStudInfo.Size = new System.Drawing.Size(119, 32);
+            this.AddStudInfo.TabIndex = 14;
+            this.AddStudInfo.Text = "Add";
+            this.AddStudInfo.UseVisualStyleBackColor = false;
+            // 
+            // EditAccInfo
+            // 
+            this.EditAccInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditAccInfo.BackColor = System.Drawing.Color.LavenderBlush;
+            this.EditAccInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditAccInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.EditAccInfo.Location = new System.Drawing.Point(621, 69);
+            this.EditAccInfo.Name = "EditAccInfo";
+            this.EditAccInfo.Size = new System.Drawing.Size(119, 32);
+            this.EditAccInfo.TabIndex = 19;
+            this.EditAccInfo.Text = "Edit";
+            this.EditAccInfo.UseVisualStyleBackColor = false;
+            // 
+            // dataAccinfo
+            // 
+            this.dataAccinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataAccinfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataAccinfo.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataAccinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataAccinfo.GridColor = System.Drawing.Color.LavenderBlush;
+            this.dataAccinfo.Location = new System.Drawing.Point(206, 107);
+            this.dataAccinfo.Name = "dataAccinfo";
+            this.dataAccinfo.Size = new System.Drawing.Size(1050, 567);
+            this.dataAccinfo.TabIndex = 20;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::StudentInformationSystem.Properties.Resources.pngtree_vector_search_icon_png_image_320926;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(1091, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 31);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::StudentInformationSystem.Properties.Resources.free_user_icon_3296_thumb;
@@ -174,23 +275,34 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // AdminLandingPage
+            // AddAccInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dataAccinfo);
+            this.Controls.Add(this.EditAccInfo);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.SearchAccTextBox);
+            this.Controls.Add(this.SearchAccInfo);
+            this.Controls.Add(this.DeleteAccInfo);
+            this.Controls.Add(this.AddStudInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.Name = "AdminLandingPage";
+            this.Name = "AddAccInfo";
             this.Text = "AdminLanding Page";
+            this.Load += new System.EventHandler(this.AddAccInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataAccinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,5 +321,12 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox SearchAccTextBox;
+        private System.Windows.Forms.Button SearchAccInfo;
+        private System.Windows.Forms.Button DeleteAccInfo;
+        private System.Windows.Forms.Button AddStudInfo;
+        private System.Windows.Forms.Button EditAccInfo;
+        private System.Windows.Forms.DataGridView dataAccinfo;
     }
 }
