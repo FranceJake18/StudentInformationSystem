@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace StudentInformationSystem
@@ -24,7 +26,35 @@ namespace StudentInformationSystem
         private void GradesPage_Load(object sender, EventArgs e)
         {
             LoadGrades();
-        }
+
+            using (SqlConnection conn = new SqlConnection(connectionSQL))
+            {
+                conn.Open();
+                string query = "SELECT Profile_Image FROM Registered_Accounts WHERE Username=@Username;";
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@Username", LoginUserRecord.UName);
+                    SqlDataReader result = command.ExecuteReader();
+
+                    if (result.Read())
+
+                        if (result["Profile_Image"] != DBNull.Value)
+                        {
+                            byte[] img = (byte[])result["Profile_Image"];
+                            using (MemoryStream ms = new MemoryStream(img))
+                            {
+                                pictureBox1.Image = System.Drawing.Image.FromStream(ms);
+                            }
+                        }
+                        else if (result["Profile_Image"] == DBNull.Value)
+                        {
+                            pictureBox1.Image = Properties.Resources.free_user_icon_3296_thumb;
+
+                        }
+                }
+                }
+            }
 
         private void SearchGrade_Click(object sender, EventArgs e)
         {
@@ -70,6 +100,66 @@ namespace StudentInformationSystem
             {
                 MessageBox.Show($"Unable to load grades. {ex.Message}", "Grades", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void GradesPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Grades_Click(object sender, EventArgs e)
+        {
+            LoadGrades();
+        }
+
+        private void StudInfo_Click(object sender, EventArgs e)
+        {
+            StudInfoPage GP = new StudInfoPage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
+        }
+
+        private void Attendance_Click(object sender, EventArgs e)
+        {
+            AttendancePage GP = new AttendancePage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
+        }
+
+        private void Announcements_Click(object sender, EventArgs e)
+        {
+            AnnouncementsPage GP = new AnnouncementsPage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
+        }
+
+        private void ExportGrade_Click_1(object sender, EventArgs e)
+        {
+            ExportGradePage EGP = new ExportGradePage();
+            EGP.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(this, new Point(1130, 63));
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            View_Profile view = new View_Profile();
+            view.Show();
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Hide();
+            this.Close();
         }
     }
 }

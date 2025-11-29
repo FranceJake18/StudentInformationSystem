@@ -116,6 +116,7 @@
             this.Announcements.TabIndex = 8;
             this.Announcements.Text = "Announcements";
             this.Announcements.UseVisualStyleBackColor = false;
+            this.Announcements.Click += new System.EventHandler(this.Announcements_Click);
             // 
             // Attendance
             // 
@@ -130,6 +131,7 @@
             this.Attendance.TabIndex = 7;
             this.Attendance.Text = "Attendance";
             this.Attendance.UseVisualStyleBackColor = false;
+            this.Attendance.Click += new System.EventHandler(this.Attendance_Click);
             // 
             // Grades
             // 
@@ -144,6 +146,7 @@
             this.Grades.TabIndex = 6;
             this.Grades.Text = "Grades";
             this.Grades.UseVisualStyleBackColor = false;
+            this.Grades.Click += new System.EventHandler(this.Grades_Click);
             // 
             // StudInfo
             // 
@@ -294,7 +297,7 @@
             this.toolStripMenuItem1,
             this.editProfileToolStripMenuItem});
             this.ProfileMenu.Name = "contextMenuStrip1";
-            this.ProfileMenu.Size = new System.Drawing.Size(137, 48);
+            this.ProfileMenu.Size = new System.Drawing.Size(181, 70);
             this.ProfileMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ProfileMenu_Opening);
             // 
             // toolStripMenuItem1

@@ -19,7 +19,7 @@ namespace StudentInformationSystem
         public StudInfoPage()
         {
             InitializeComponent();
-            loaddata();
+           
             
         }
 
@@ -67,6 +67,7 @@ namespace StudentInformationSystem
 
         private void StudInfoPage_Load(object sender, EventArgs e)
         {
+            loaddata();
             using (SqlConnection conn = new SqlConnection(connectionSQL))
             {
                 conn.Open();
@@ -78,6 +79,7 @@ namespace StudentInformationSystem
                     SqlDataReader result = command.ExecuteReader();
 
                     if (result.Read())
+
                         if (result["Profile_Image"] != DBNull.Value)
                         {
                             byte[] img = (byte[])result["Profile_Image"];
@@ -183,12 +185,39 @@ namespace StudentInformationSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
           
-            ProfileMenu.Show(this, new Point(1130, 65));
+            ProfileMenu.Show(this, new Point(1130, 63));
         }
 
         private void ProfileMenu_Opening(object sender, CancelEventArgs e)
         {
             
+        }
+
+        private void Grades_Click(object sender, EventArgs e)
+        {
+            GradesPage GP = new GradesPage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
+        }
+
+        private void Attendance_Click(object sender, EventArgs e)
+        {
+            AttendancePage GP = new AttendancePage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
+        }
+
+        private void Announcements_Click(object sender, EventArgs e)
+        {
+            AnnouncementsPage GP = new AnnouncementsPage();
+            GP.StartPosition = FormStartPosition.CenterScreen;
+            GP.Location = this.Location;
+            GP.Show();
+            this.Close();
         }
     }
 }

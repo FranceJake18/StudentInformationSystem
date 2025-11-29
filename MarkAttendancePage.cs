@@ -90,5 +90,10 @@ namespace StudentInformationSystem
             error = string.Empty;
             return true;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
