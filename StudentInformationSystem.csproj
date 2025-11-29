@@ -218,5 +218,17 @@
   <ItemGroup>
     <None Include="Resources\ChatGPT Image Nov 10, 2025, 02_44_36 PM.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0a8eeb3e-c779-4f95-9167-e594f61b0a3f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c96d6c81-c097-4d31-90fd-df15503a6bf6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c96d6c81-c097-4d31-90fd-df15503a6bf61.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

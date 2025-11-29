@@ -63,6 +63,16 @@ namespace StudentInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0a8eeb3e_c779_4f95_9167_e594f61b0a3f {
+            get {
+                object obj = ResourceManager.GetObject("0a8eeb3e-c779-4f95-9167-e594f61b0a3f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1199277_200 {
             get {
                 object obj = ResourceManager.GetObject("1199277-200", resourceCulture);
@@ -73,9 +83,39 @@ namespace StudentInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c96d6c81_c097_4d31_90fd_df15503a6bf6 {
+            get {
+                object obj = ResourceManager.GetObject("c96d6c81-c097-4d31-90fd-df15503a6bf6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c96d6c81_c097_4d31_90fd_df15503a6bf61 {
+            get {
+                object obj = ResourceManager.GetObject("c96d6c81-c097-4d31-90fd-df15503a6bf61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_Nov_10__2025__02_44_36_PM {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image Nov 10, 2025, 02_44_36 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__1_ {
+            get {
+                object obj = ResourceManager.GetObject("download (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
