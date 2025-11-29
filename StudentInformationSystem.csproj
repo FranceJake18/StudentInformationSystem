@@ -44,6 +44,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UpdateProfile">
+      <HintPath>..\..\..\Documents\Visual Studio 2022\UpdateProfile\UpdateProfile\bin\Debug\UpdateProfile.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddAcccountAdmin.cs">
@@ -51,6 +54,12 @@
     </Compile>
     <Compile Include="AddAcccountAdmin.Designer.cs">
       <DependentUpon>AddAcccountAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAnnouncement.Designer.cs">
+      <DependentUpon>AddAnnouncement.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStudentInformation.cs">
       <SubType>Form</SubType>
@@ -76,11 +85,23 @@
     <Compile Include="AttendancePage.Designer.cs">
       <DependentUpon>AttendancePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAnnouncement.Designer.cs">
+      <DependentUpon>DeleteAnnouncement.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteStudentInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeleteStudentInformation.Designer.cs">
       <DependentUpon>DeleteStudentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAnnouncement.Designer.cs">
+      <DependentUpon>EditAnnouncement.cs</DependentUpon>
     </Compile>
     <Compile Include="EditProfile.cs">
       <SubType>Form</SubType>
@@ -147,6 +168,9 @@
     <EmbeddedResource Include="AddAcccountAdmin.resx">
       <DependentUpon>AddAcccountAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddAnnouncement.resx">
+      <DependentUpon>AddAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudentInformation.resx">
       <DependentUpon>AddStudentInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,8 +183,14 @@
     <EmbeddedResource Include="AttendancePage.resx">
       <DependentUpon>AttendancePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAnnouncement.resx">
+      <DependentUpon>DeleteAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteStudentInformation.resx">
       <DependentUpon>DeleteStudentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAnnouncement.resx">
+      <DependentUpon>EditAnnouncement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>

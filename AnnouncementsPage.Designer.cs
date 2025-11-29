@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.StudinfoSystem = new System.Windows.Forms.Label();
             this.Announcements = new System.Windows.Forms.Button();
@@ -40,15 +41,20 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.CreateA = new System.Windows.Forms.Button();
+            this.EditA = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.View_Profile = new System.Windows.Forms.ToolStripMenuItem();
+            this.Logout = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,6 +95,7 @@
             this.Announcements.TabIndex = 8;
             this.Announcements.Text = "Announcements";
             this.Announcements.UseVisualStyleBackColor = false;
+            this.Announcements.Click += new System.EventHandler(this.Announcements_Click);
             // 
             // pictureBox1
             // 
@@ -114,6 +121,7 @@
             this.Attendance.TabIndex = 7;
             this.Attendance.Text = "Attendance";
             this.Attendance.UseVisualStyleBackColor = false;
+            this.Attendance.Click += new System.EventHandler(this.Attendance_Click);
             // 
             // StudInfo
             // 
@@ -128,6 +136,7 @@
             this.StudInfo.TabIndex = 5;
             this.StudInfo.Text = "Student Info";
             this.StudInfo.UseVisualStyleBackColor = false;
+            this.StudInfo.Click += new System.EventHandler(this.StudInfo_Click);
             // 
             // Grades
             // 
@@ -142,6 +151,7 @@
             this.Grades.TabIndex = 6;
             this.Grades.Text = "Grades";
             this.Grades.UseVisualStyleBackColor = false;
+            this.Grades.Click += new System.EventHandler(this.Grades_Click);
             // 
             // panel2
             // 
@@ -187,22 +197,13 @@
             this.panel3.Size = new System.Drawing.Size(200, 38);
             this.panel3.TabIndex = 12;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(212, 171);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1040, 498);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.Snow;
             this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(229, 189);
+            this.listBox1.Location = new System.Drawing.Point(228, 175);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1011, 94);
             this.listBox1.TabIndex = 12;
@@ -214,7 +215,7 @@
             this.listBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 18;
-            this.listBox2.Location = new System.Drawing.Point(229, 289);
+            this.listBox2.Location = new System.Drawing.Point(228, 281);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(1011, 94);
             this.listBox2.TabIndex = 13;
@@ -225,7 +226,7 @@
             this.listBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 18;
-            this.listBox3.Location = new System.Drawing.Point(229, 390);
+            this.listBox3.Location = new System.Drawing.Point(228, 386);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(1011, 94);
             this.listBox3.TabIndex = 14;
@@ -236,7 +237,7 @@
             this.listBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 18;
-            this.listBox4.Location = new System.Drawing.Point(229, 493);
+            this.listBox4.Location = new System.Drawing.Point(228, 492);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(1011, 94);
             this.listBox4.TabIndex = 15;
@@ -252,26 +253,81 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Announcements";
             // 
+            // CreateA
+            // 
+            this.CreateA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CreateA.BackColor = System.Drawing.Color.LavenderBlush;
+            this.CreateA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateA.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.CreateA.Location = new System.Drawing.Point(1045, 134);
+            this.CreateA.Name = "CreateA";
+            this.CreateA.Size = new System.Drawing.Size(194, 35);
+            this.CreateA.TabIndex = 9;
+            this.CreateA.Text = "Create Announcement";
+            this.CreateA.UseVisualStyleBackColor = false;
+            this.CreateA.Click += new System.EventHandler(this.CreateA_Click);
+            // 
+            // EditA
+            // 
+            this.EditA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditA.BackColor = System.Drawing.Color.LavenderBlush;
+            this.EditA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditA.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.EditA.Location = new System.Drawing.Point(845, 134);
+            this.EditA.Name = "EditA";
+            this.EditA.Size = new System.Drawing.Size(194, 35);
+            this.EditA.TabIndex = 21;
+            this.EditA.Text = "Edit Announcement";
+            this.EditA.UseVisualStyleBackColor = false;
+            this.EditA.Click += new System.EventHandler(this.EditA_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.View_Profile,
+            this.Logout});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // View_Profile
+            // 
+            this.View_Profile.Name = "View_Profile";
+            this.View_Profile.Size = new System.Drawing.Size(180, 22);
+            this.View_Profile.Text = "View Profile";
+            this.View_Profile.Click += new System.EventHandler(this.View_Profile_Click);
+            // 
+            // Logout
+            // 
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(180, 22);
+            this.Logout.Text = "Logout";
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // AnnouncementsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.EditA);
+            this.Controls.Add(this.CreateA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AnnouncementsPage";
             this.Text = "AnnouncementsPage";
+            this.Load += new System.EventHandler(this.AnnouncementsPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,11 +347,15 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button CreateA;
+        private System.Windows.Forms.Button EditA;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem View_Profile;
+        private System.Windows.Forms.ToolStripMenuItem Logout;
     }
 }

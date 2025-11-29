@@ -10,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UpdateProfile;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace StudentInformationSystem
 {
     public partial class StudInfoPage : Form
     {
+    
         String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
         public StudInfoPage()
         {
@@ -68,36 +71,22 @@ namespace StudentInformationSystem
         private void StudInfoPage_Load(object sender, EventArgs e)
         {
             loaddata();
-            using (SqlConnection conn = new SqlConnection(connectionSQL))
-            {
-                conn.Open();
-                string query = "SELECT Profile_Image FROM Registered_Accounts WHERE Username=@Username;";
-
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@Username", LoginUserRecord.UName);
-                    SqlDataReader result = command.ExecuteReader();
-
-                    if (result.Read())
-
-                        if (result["Profile_Image"] != DBNull.Value)
-                        {
-                            byte[] img = (byte[])result["Profile_Image"];
-                            using (MemoryStream ms = new MemoryStream(img))
-                            {
-                                Pic.Image = System.Drawing.Image.FromStream(ms);
-                            }
-                        }
-                        else if (result["Profile_Image"] == DBNull.Value)
-                        {
-                            Pic.Image = Properties.Resources.free_user_icon_3296_thumb;
-
-                        }
-                }
-            }
+            var repo = new LoadData(connectionSQL);
+            System.Drawing.Image Updated = repo.LoadProfileImage(LoginUserRecord.UName);
+            Pic.Image = Updated;
         }
+        private void StudInfoPage_Activated(object sender, EventArgs e)
+        {
+            var repo = new LoadData(connectionSQL);
+            Pic.Image = repo.LoadProfileImage(LoginUserRecord.UName);
+        }
+
+
+
         public void loaddata()
         {
+            
+
             using (SqlConnection sqlconnect = new SqlConnection(connectionSQL))
             {
                 sqlconnect.Open();
@@ -114,7 +103,7 @@ namespace StudentInformationSystem
         private void AddStudInfo_Click(object sender, EventArgs e)
         {
             ProgramError add = new ProgramError(this);
-            add.Show();
+            add.ShowDialog();
         }
 
         private void SearchStudTextBox_TextChanged(object sender, EventArgs e)
@@ -167,6 +156,7 @@ namespace StudentInformationSystem
         private void StudInfo_Click(object sender, EventArgs e)
         {
             loaddata();
+            
         }
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,7 +169,8 @@ namespace StudentInformationSystem
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             View_Profile view = new View_Profile();
-            view.Show();
+            view.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -198,7 +189,7 @@ namespace StudentInformationSystem
             GradesPage GP = new GradesPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
 
@@ -207,7 +198,7 @@ namespace StudentInformationSystem
             AttendancePage GP = new AttendancePage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
 
@@ -216,7 +207,7 @@ namespace StudentInformationSystem
             AnnouncementsPage GP = new AnnouncementsPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
     }

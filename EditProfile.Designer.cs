@@ -257,6 +257,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "EditProfile";
             this.Text = "-";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProfile_FormClosed);
             this.Load += new System.EventHandler(this.EditProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

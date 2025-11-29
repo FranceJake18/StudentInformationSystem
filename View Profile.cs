@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UpdateProfile;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace StudentInformationSystem
@@ -52,17 +54,20 @@ namespace StudentInformationSystem
                             byte[] img = (byte[])result["Profile_Image"];
                             using (MemoryStream ms = new MemoryStream(img))
                             {
-                                ImageB.Image = Image.FromStream(ms);
+                                ImageB.Image = System.Drawing.Image.FromStream(ms);
+                                
                             }
                         }
                         else
                         {
                             ImageB.Image = Properties.Resources.free_user_icon_3296_thumb;
+                           
                         }
 
                     }
                     
                 }
+                conn.Close();
             }
         }
         private void View_Profile_Load(object sender, EventArgs e)
@@ -72,6 +77,7 @@ namespace StudentInformationSystem
 
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
+            StudInfoPage stud = new StudInfoPage();
             this.Hide();
         }
 
@@ -79,7 +85,7 @@ namespace StudentInformationSystem
         {
             EditProfile edit = new EditProfile(this);
             this.Hide();
-            edit.Show();
+            edit.ShowDialog();
         }
     }
 }

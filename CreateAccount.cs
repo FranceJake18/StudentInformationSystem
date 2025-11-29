@@ -57,12 +57,12 @@ namespace StudentInformationSystem
 
                     if (Password == CPassword)
                     {
-
+                        string rolle = "User";
                         String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
                         using (SqlConnection connection = new SqlConnection(connectionSQL))
                         {
                             connection.Open();
-                            string AddAcc = @"INSERT INTO Registered_Accounts(Username, Password, First_Name, Last_Name, Middle_Name) VALUES (@Username, @Password, @FName, @LName, @MName)";
+                            string AddAcc = @"INSERT INTO Registered_Accounts(Username, Password, First_Name, Last_Name, Middle_Name, Roles) VALUES (@Username, @Password, @FName, @LName, @MName, @Role)";
                             using (SqlCommand cmd = new SqlCommand(AddAcc, connection))
                             {
                                 cmd.Parameters.AddWithValue("@Username", Username);
@@ -70,8 +70,9 @@ namespace StudentInformationSystem
                                 cmd.Parameters.AddWithValue("@FName", FName);
                                 cmd.Parameters.AddWithValue("@LName", LName);
                                 cmd.Parameters.AddWithValue("@MName", MName);
+                                cmd.Parameters.AddWithValue("@Role", rolle);
 
-                                
+
 
                                 string log = "SELECT COUNT (*) FROM Registered_Accounts WHERE Username=@Username";
                                 using (SqlCommand command = new SqlCommand(log, connection))
@@ -125,7 +126,7 @@ namespace StudentInformationSystem
         {
             loginPage show = new loginPage();
             this.Hide();
-            show.Show();
+            show.ShowDialog();
         }
 
         private void CreateAccountPage_Load(object sender, EventArgs e)

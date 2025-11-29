@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using UpdateProfile;
 
 namespace StudentInformationSystem
 {
@@ -28,33 +29,9 @@ namespace StudentInformationSystem
         {
             LoadAttendance();
 
-            using (SqlConnection conn = new SqlConnection(connectionSQL))
-            {
-                conn.Open();
-                string query = "SELECT Profile_Image FROM Registered_Accounts WHERE Username=@Username;";
-
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@Username", LoginUserRecord.UName);
-                    SqlDataReader result = command.ExecuteReader();
-
-                    if (result.Read())
-
-                        if (result["Profile_Image"] != DBNull.Value)
-                        {
-                            byte[] img = (byte[])result["Profile_Image"];
-                            using (MemoryStream ms = new MemoryStream(img))
-                            {
-                                pictureBox1.Image = System.Drawing.Image.FromStream(ms);
-                            }
-                        }
-                        else if (result["Profile_Image"] == DBNull.Value)
-                        {
-                            pictureBox1.Image = Properties.Resources.free_user_icon_3296_thumb;
-
-                        }
-                }
-            }
+            var repo = new LoadData(connectionSQL);
+            System.Drawing.Image Updated = repo.LoadProfileImage(LoginUserRecord.UName);
+            Pic.Image = Updated;
         }
 
         private void SearchAttendance_Click(object sender, EventArgs e)
@@ -136,7 +113,7 @@ namespace StudentInformationSystem
             StudInfoPage GP = new StudInfoPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
 
@@ -145,13 +122,14 @@ namespace StudentInformationSystem
             GradesPage GP = new GradesPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
 
         private void Attendance_Click(object sender, EventArgs e)
         {
             LoadAttendance();
+
         }
 
         private void Announcements_Click(object sender, EventArgs e)
@@ -159,7 +137,7 @@ namespace StudentInformationSystem
             AttendancePage GP = new AttendancePage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
-            GP.Show();
+            GP.ShowDialog();
             this.Close();
         }
 
@@ -173,7 +151,8 @@ namespace StudentInformationSystem
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             View_Profile view = new View_Profile();
-            view.Show();
+            view.ShowDialog();
+            this.Close();
         }
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)

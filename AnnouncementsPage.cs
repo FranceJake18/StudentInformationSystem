@@ -3,41 +3,120 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UpdateProfile;
 
 namespace StudentInformationSystem
 {
     public partial class AnnouncementsPage : Form
     {
+        String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
         public AnnouncementsPage()
         {
             InitializeComponent();
 
-            string[] announcements = {
-        "Upcoming Midterm Exam",
-        "Date & Time: November 18, 2025, 8:00 AM",
-        "Content: The Midterm Exam for Science will be held on Tuesday, November 18 in the main hall."
-    };
-
-            listBox1.Items.Clear();
-            foreach (string announcement in announcements)
-            {
-                listBox1.Items.Add(announcement);
-            }
-        }
+    }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text = listBox1.SelectedItem.ToString();
+            View_Profile view = new View_Profile();
+            view.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            contextMenuStrip1.Show(this, new Point(1130, 63));
+        }
 
+        private void AnnouncementsPage_Load(object sender, EventArgs e)
+        {
+            RefreshListBoxes();
+            var repo = new LoadData(connectionSQL);
+            System.Drawing.Image Updated = repo.LoadProfileImage(LoginUserRecord.UName);
+            pictureBox1.Image = Updated;
+        }
+        private void LoadListBox(ListBox listBox, string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                listBox.Items.Clear();
+                string[] lines = File.ReadAllLines(filePath);
+                listBox.Items.AddRange(lines);
+            }
+            else
+            {
+                MessageBox.Show("No File Found");
+            }
+        }
+        public void RefreshListBoxes()
+        {
+            LoadListBox(listBox1, @"C:\Users\Christopher\Desktop\file1.txt");
+            LoadListBox(listBox2, @"C:\Users\Christopher\Desktop\file2.txt");
+            LoadListBox(listBox2, @"C:\Users\Christopher\Desktop\file3.txt");
+            LoadListBox(listBox3, @"C:\Users\Christopher\Desktop\file4.txt");
+        }
+
+
+        private void StudInfo_Click(object sender, EventArgs e)
+        {
+            StudInfoPage studInfoPage = new StudInfoPage();
+            studInfoPage.StartPosition = FormStartPosition.CenterScreen;
+            studInfoPage.Location = this.Location;
+            studInfoPage.ShowDialog();
+            this.Close();
+        }
+
+        private void CreateA_Click(object sender, EventArgs e)
+        {
+            AddAnnouncement addAnnouncement = new AddAnnouncement();
+            addAnnouncement.ShowDialog();
+        }
+
+        private void EditA_Click(object sender, EventArgs e)
+        {
+            EditAnnouncement edit = new EditAnnouncement();
+            edit.ShowDialog();
+        }
+
+        private void View_Profile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Grades_Click(object sender, EventArgs e)
+        {
+            GradesPage studInfoPage = new GradesPage();
+            studInfoPage.StartPosition = FormStartPosition.CenterScreen;
+            studInfoPage.Location = this.Location;
+            studInfoPage.ShowDialog();
+            this.Close();
+        }
+
+        private void Attendance_Click(object sender, EventArgs e)
+        {
+            AttendancePage studInfoPage = new AttendancePage();
+            studInfoPage.StartPosition = FormStartPosition.CenterScreen;
+            studInfoPage.Location = this.Location;
+            studInfoPage.ShowDialog();
+            this.Close();
+        }
+
+        private void Announcements_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Hide();
+            this.Close();
         }
     }
 }
+
 

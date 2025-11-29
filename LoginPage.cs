@@ -43,7 +43,7 @@ namespace StudentInformationSystem
         {
             CreateAccountPage cap = new CreateAccountPage();
             this.Hide();
-            cap.Show();
+            cap.ShowDialog();
         }
 
         private void ForgotPass_Click(object sender, EventArgs e)
@@ -63,20 +63,30 @@ namespace StudentInformationSystem
             {
                 connection.Open();
 
-                string log = "SELECT COUNT (*) FROM Registered_Accounts WHERE Username=@Username AND Password=@Password";
+                string log = "SELECT Roles FROM Registered_Accounts WHERE Username=@Username AND Password=@Password";
                 using (SqlCommand command = new SqlCommand(log, connection))
                 {
+
+                    
                     command.Parameters.AddWithValue("@Username", Username);
                     command.Parameters.AddWithValue("@Password", Password);
 
-                    int result = (int)command.ExecuteScalar();
-
-                    if (result > 0)
+                    object objq = command.ExecuteScalar();
+                    if (objq != null)
                     {
-            
-                        StudInfoPage landing = new StudInfoPage();
-                        this.Hide();
-                        landing.Show();
+                        string result = objq.ToString();
+                        if (result == "Admin")
+                        {
+                            AddAccInfo landing = new AddAccInfo();
+                            this.Hide();
+                            landing.ShowDialog();
+                        }
+                        else if(result == "User")
+                        {
+                            StudInfoPage landing = new StudInfoPage();
+                            this.Hide();
+                            landing.ShowDialog();
+                        }
                     }
                     else
                     {

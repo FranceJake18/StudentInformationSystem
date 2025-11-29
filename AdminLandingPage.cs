@@ -42,8 +42,7 @@ namespace StudentInformationSystem
 
         private void AddAccInfo_Load(object sender, EventArgs e)
         {
-            AddAcccountAdmin ad = new AddAcccountAdmin(this);
-            ad.Show();
+            
         }
 
         private void Accounts_Click(object sender, EventArgs e)
@@ -104,6 +103,12 @@ namespace StudentInformationSystem
                     dataAccinfo.DataSource = dt;
                 }
             }
+        }
+
+        private void AddStudInfo_Click(object sender, EventArgs e)
+        {
+            AddAcccountAdmin ad = new AddAcccountAdmin(this);
+            ad.ShowDialog();
         }
     }
     }

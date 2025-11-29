@@ -271,7 +271,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label StudinfoSystem;
         private System.Windows.Forms.Button Editbtn;
-        private System.Windows.Forms.PictureBox ImageB;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -282,5 +281,6 @@
         private System.Windows.Forms.Label FirstN;
         private System.Windows.Forms.Label LastN;
         private System.Windows.Forms.Label MiddleN;
+        public System.Windows.Forms.PictureBox ImageB;
     }
 }
