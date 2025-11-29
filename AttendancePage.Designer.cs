@@ -83,6 +83,7 @@
             this.StudinfoSystem.Size = new System.Drawing.Size(221, 19);
             this.StudinfoSystem.TabIndex = 3;
             this.StudinfoSystem.Text = "Student Information System";
+            this.StudinfoSystem.Click += new System.EventHandler(this.StudinfoSystem_Click);
             // 
             // Announcements
             // 

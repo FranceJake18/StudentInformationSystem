@@ -81,6 +81,7 @@
             this.StudinfoSystem.Size = new System.Drawing.Size(221, 19);
             this.StudinfoSystem.TabIndex = 3;
             this.StudinfoSystem.Text = "Student Information System";
+            this.StudinfoSystem.Click += new System.EventHandler(this.StudinfoSystem_Click);
             // 
             // Announcements
             // 
@@ -289,19 +290,19 @@
             this.View_Profile,
             this.Logout});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 48);
             // 
             // View_Profile
             // 
             this.View_Profile.Name = "View_Profile";
-            this.View_Profile.Size = new System.Drawing.Size(180, 22);
+            this.View_Profile.Size = new System.Drawing.Size(136, 22);
             this.View_Profile.Text = "View Profile";
             this.View_Profile.Click += new System.EventHandler(this.View_Profile_Click);
             // 
             // Logout
             // 
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(180, 22);
+            this.Logout.Size = new System.Drawing.Size(136, 22);
             this.Logout.Text = "Logout";
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 

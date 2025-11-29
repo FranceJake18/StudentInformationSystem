@@ -83,7 +83,7 @@ namespace StudentInformationSystem
                         }
                         else if(result == "User")
                         {
-                            StudInfoPage landing = new StudInfoPage();
+                            LandingPage landing = new LandingPage();
                             this.Hide();
                             landing.ShowDialog();
                         }

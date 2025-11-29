@@ -187,6 +187,7 @@
             this.StudinfoSystem.Size = new System.Drawing.Size(221, 19);
             this.StudinfoSystem.TabIndex = 3;
             this.StudinfoSystem.Text = "Student Information System";
+            this.StudinfoSystem.Click += new System.EventHandler(this.StudinfoSystem_Click);
             // 
             // Pic
             // 
@@ -297,7 +298,7 @@
             this.toolStripMenuItem1,
             this.editProfileToolStripMenuItem});
             this.ProfileMenu.Name = "contextMenuStrip1";
-            this.ProfileMenu.Size = new System.Drawing.Size(181, 70);
+            this.ProfileMenu.Size = new System.Drawing.Size(137, 48);
             this.ProfileMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ProfileMenu_Opening);
             // 
             // toolStripMenuItem1

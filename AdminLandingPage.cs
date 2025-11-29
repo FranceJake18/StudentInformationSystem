@@ -110,5 +110,14 @@ namespace StudentInformationSystem
             AddAcccountAdmin ad = new AddAcccountAdmin(this);
             ad.ShowDialog();
         }
+
+        private void MainPage_Click(object sender, EventArgs e)
+        {
+            LandingPage Land = new LandingPage();
+            Land.StartPosition = FormStartPosition.CenterScreen;
+            Land.Location = this.Location;
+            Land.ShowDialog();
+            this.Close();
+        }
     }
     }

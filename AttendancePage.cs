@@ -31,7 +31,7 @@ namespace StudentInformationSystem
 
             var repo = new LoadData(connectionSQL);
             System.Drawing.Image Updated = repo.LoadProfileImage(LoginUserRecord.UName);
-            Pic.Image = Updated;
+            pictureBox1.Image = Updated;
         }
 
         private void SearchAttendance_Click(object sender, EventArgs e)
@@ -174,6 +174,15 @@ namespace StudentInformationSystem
         private void AttendancePage_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void StudinfoSystem_Click(object sender, EventArgs e)
+        {
+            LandingPage Land = new LandingPage();
+            Land.StartPosition = FormStartPosition.CenterScreen;
+            Land.Location = this.Location;
+            Land.ShowDialog();
+            this.Close();
         }
     }
 }

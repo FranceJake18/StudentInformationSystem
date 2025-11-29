@@ -116,6 +116,15 @@ namespace StudentInformationSystem
             contextMenuStrip1.Hide();
             this.Close();
         }
+
+        private void StudinfoSystem_Click(object sender, EventArgs e)
+        {
+            LandingPage Land = new LandingPage();
+            Land.StartPosition = FormStartPosition.CenterScreen;
+            Land.Location = this.Location;
+            Land.ShowDialog();
+            this.Close();
+        }
     }
 }
 

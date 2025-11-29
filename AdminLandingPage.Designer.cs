@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Accounts = new System.Windows.Forms.Button();
-            this.MainPage = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -49,6 +47,7 @@
             this.EditAccInfo = new System.Windows.Forms.Button();
             this.dataAccinfo = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Accounts = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,8 +60,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Accounts);
-            this.panel1.Controls.Add(this.MainPage);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -79,35 +76,6 @@
             this.label1.Size = new System.Drawing.Size(221, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Student Information System";
-            // 
-            // Accounts
-            // 
-            this.Accounts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Accounts.BackColor = System.Drawing.Color.LavenderBlush;
-            this.Accounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accounts.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Accounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.Accounts.Location = new System.Drawing.Point(813, 14);
-            this.Accounts.Name = "Accounts";
-            this.Accounts.Size = new System.Drawing.Size(194, 35);
-            this.Accounts.TabIndex = 6;
-            this.Accounts.Text = "Accounts";
-            this.Accounts.UseVisualStyleBackColor = false;
-            this.Accounts.Click += new System.EventHandler(this.Accounts_Click);
-            // 
-            // MainPage
-            // 
-            this.MainPage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MainPage.BackColor = System.Drawing.Color.LavenderBlush;
-            this.MainPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainPage.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.MainPage.Location = new System.Drawing.Point(1013, 14);
-            this.MainPage.Name = "MainPage";
-            this.MainPage.Size = new System.Drawing.Size(194, 35);
-            this.MainPage.TabIndex = 8;
-            this.MainPage.Text = "Main Page";
-            this.MainPage.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -276,12 +244,28 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
+            // Accounts
+            // 
+            this.Accounts.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Accounts.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Accounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Accounts.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Accounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.Accounts.Location = new System.Drawing.Point(206, 70);
+            this.Accounts.Name = "Accounts";
+            this.Accounts.Size = new System.Drawing.Size(119, 31);
+            this.Accounts.TabIndex = 6;
+            this.Accounts.Text = "Refresh";
+            this.Accounts.UseVisualStyleBackColor = false;
+            this.Accounts.Click += new System.EventHandler(this.Accounts_Click);
+            // 
             // AddAccInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.Accounts);
             this.Controls.Add(this.dataAccinfo);
             this.Controls.Add(this.EditAccInfo);
             this.Controls.Add(this.pictureBox2);
@@ -312,8 +296,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button MainPage;
-        private System.Windows.Forms.Button Accounts;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -329,5 +311,6 @@
         private System.Windows.Forms.Button AddStudInfo;
         private System.Windows.Forms.Button EditAccInfo;
         private System.Windows.Forms.DataGridView dataAccinfo;
+        private System.Windows.Forms.Button Accounts;
     }
 }
