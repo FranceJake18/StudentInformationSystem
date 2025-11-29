@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="c96d6c81-c097-4d31-90fd-df15503a6bf61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c96d6c81-c097-4d31-90fd-df15503a6bf61.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngtree-circle-password-icon-vectors-png-image_5053796" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-circle-password-icon-vectors-png-image_5053796.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngtree-vector-search-icon-png-image_320926" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-vector-search-icon-png-image_320926.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChatGPT Image Nov 10, 2025, 02_44_36 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image Nov 10, 2025, 02_44_36 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="free-user-icon-3296-thumb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-user-icon-3296-thumb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,13 +136,19 @@
   <data name="pexels-karola-g-5208304" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-karola-g-5208304.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="0a8eeb3e-c779-4f95-9167-e594f61b0a3f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0a8eeb3e-c779-4f95-9167-e594f61b0a3f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="samd_gjmu_231017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\samd_gjmu_231017.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1199277-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1199277-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ChatGPT Image Nov 10, 2025, 02_44_36 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChatGPT Image Nov 10, 2025, 02_44_36 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="c96d6c81-c097-4d31-90fd-df15503a6bf6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c96d6c81-c097-4d31-90fd-df15503a6bf6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
