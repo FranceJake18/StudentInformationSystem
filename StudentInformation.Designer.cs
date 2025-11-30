@@ -51,6 +51,7 @@
             this.ProfileMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic)).BeginInit();
@@ -202,6 +203,7 @@
             // 
             // dataStudInfo
             // 
+            this.dataStudInfo.AllowUserToAddRows = false;
             this.dataStudInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataStudInfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataStudInfo.BackgroundColor = System.Drawing.Color.Snow;
@@ -231,7 +233,7 @@
             this.AddStudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddStudInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStudInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.AddStudInfo.Location = new System.Drawing.Point(613, 133);
+            this.AddStudInfo.Location = new System.Drawing.Point(483, 133);
             this.AddStudInfo.Name = "AddStudInfo";
             this.AddStudInfo.Size = new System.Drawing.Size(119, 32);
             this.AddStudInfo.TabIndex = 8;
@@ -315,12 +317,28 @@
             this.editProfileToolStripMenuItem.Text = "Logout";
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.button1.Location = new System.Drawing.Point(611, 133);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 32);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StudInfoPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SearchStudTextBox);
             this.Controls.Add(this.SearchStudInfo);
@@ -370,5 +388,6 @@
         private System.Windows.Forms.ContextMenuStrip ProfileMenu;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

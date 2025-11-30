@@ -17,13 +17,13 @@ namespace StudentInformationSystem
 {
     public partial class StudInfoPage : Form
     {
-    
+
         String connectionSQL = "data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;";
         public StudInfoPage()
         {
             InitializeComponent();
-           
-            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace StudentInformationSystem
 
         public void loaddata()
         {
-            
+
 
             using (SqlConnection sqlconnect = new SqlConnection(connectionSQL))
             {
@@ -113,7 +113,7 @@ namespace StudentInformationSystem
 
         private void SearchStudInfo_Click(object sender, EventArgs e)
         {
-           
+
             using (SqlConnection con = new SqlConnection(connectionSQL))
             {
                 con.Open();
@@ -131,8 +131,8 @@ namespace StudentInformationSystem
                 }
             }
         }
-       
-        
+
+
         private void SearchStudInfo_Click_1(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(connectionSQL))
@@ -156,14 +156,14 @@ namespace StudentInformationSystem
         private void StudInfo_Click(object sender, EventArgs e)
         {
             loaddata();
-            
+
         }
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProfileMenu.Hide();
             this.Close();
-            
+
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -175,13 +175,13 @@ namespace StudentInformationSystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-          
+
             ProfileMenu.Show(this, new Point(1130, 63));
         }
 
         private void ProfileMenu_Opening(object sender, CancelEventArgs e)
         {
-            
+
         }
 
         private void Grades_Click(object sender, EventArgs e)
@@ -218,6 +218,48 @@ namespace StudentInformationSystem
             Land.Location = this.Location;
             Land.ShowDialog();
             this.Close();
+        }
+        private string GetCellValue(DataGridViewRow row, string columnName)
+        {
+            return row.Cells[columnName]?.Value?.ToString() ?? string.Empty;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (dataStudInfo.SelectedRows.Count > 0)
+                {
+
+                    DataGridViewRow row = dataStudInfo.SelectedRows[0];
+
+
+                    EdiitStudentAccounts Edit = new EdiitStudentAccounts();
+                    Edit.LoadEditData(
+                    Convert.ToInt32(row.Cells["Student_ID"].Value),
+                    row.Cells["First_Name"].Value?.ToString(),
+                    row.Cells["Last_Name"].Value?.ToString(),
+                    row.Cells["Middle_Name"].Value?.ToString(),
+                    Convert.ToInt32(row.Cells["Age"].Value),
+                    Convert.ToDateTime(row.Cells["Date_of_Birth"].Value),
+                    row.Cells["Gender"].Value?.ToString(),
+                    row.Cells["Program"].Value?.ToString()
+    );
+                    Edit.StartPosition = FormStartPosition.CenterScreen;
+                    Edit.Location = this.Location;
+                    Edit.ShowDialog();
+
+                    loaddata();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to edit.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Input. Try Again.");
+            }
         }
     }
 }

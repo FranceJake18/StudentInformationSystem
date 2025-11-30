@@ -97,6 +97,12 @@
     <Compile Include="DeleteStudentInformation.Designer.cs">
       <DependentUpon>DeleteStudentInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="EdiitStudentAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdiitStudentAccounts.Designer.cs">
+      <DependentUpon>EdiitStudentAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteStudentInformation.resx">
       <DependentUpon>DeleteStudentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdiitStudentAccounts.resx">
+      <DependentUpon>EdiitStudentAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditAnnouncement.resx">
       <DependentUpon>EditAnnouncement.cs</DependentUpon>

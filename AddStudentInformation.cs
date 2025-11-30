@@ -42,65 +42,72 @@ namespace StudentInformationSystem
             string Gender = GenderCB.Text;
             DateTime Birth = BirthDTP.Value.Date;
 
-            if (string.IsNullOrWhiteSpace(FirstN.Text))
+            try
             {
-                FirstName.Text = "First Name cannot be Empty";
-            }
-            if (string.IsNullOrWhiteSpace(LastN.Text))
-            {
-                LastName.Text = "Last Name cannot be Empty";
-            }
-            if (string.IsNullOrWhiteSpace(StudNum.Text))
-            {
-             StudentNoError.Text = "Student Number cannot be Empty";
-            }
-            if (string.IsNullOrWhiteSpace(ProgramCB.Text))
-            {
-                ProgramE.Text = "Program cannot be Empty";
-            }
-            if (string.IsNullOrWhiteSpace(GenderCB.Text))
-            {
-                GenderError.Text = "Gender cannot be Empty";
-            }
-            if (string.IsNullOrWhiteSpace(AgeB.Text))
-            {
-                AgeError.Text = "Age cannot be Empty";
-            }
-            
-
-            else
-                      {
-                int StudentNo = Convert.ToInt32(StudNum.Text);
-                int age = Convert.ToInt32(AgeB.Text);
-                using (SqlConnection con = new SqlConnection(connectionSQL))
+                if (string.IsNullOrWhiteSpace(FirstN.Text))
                 {
-                    con.Open();
-                    string query = "INSERT INTO StudentInfo_Table (Student_ID, First_Name, Last_Name, Middle_Name, Age, Date_of_Birth, Gender, Program) VALUES  (@StudentNo, @FN, @LN, @MN, @Age, @Birth, @Gender, @Program); ";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    FirstName.Text = "First Name cannot be Empty";
+                }
+                if (string.IsNullOrWhiteSpace(LastN.Text))
+                {
+                    LastName.Text = "Last Name cannot be Empty";
+                }
+                if (string.IsNullOrWhiteSpace(StudNum.Text))
+                {
+                    StudentNoError.Text = "Student Number cannot be Empty";
+                }
+                if (string.IsNullOrWhiteSpace(ProgramCB.Text))
+                {
+                    ProgramE.Text = "Program cannot be Empty";
+                }
+                if (string.IsNullOrWhiteSpace(GenderCB.Text))
+                {
+                    GenderError.Text = "Gender cannot be Empty";
+                }
+                if (string.IsNullOrWhiteSpace(AgeB.Text))
+                {
+                    AgeError.Text = "Age cannot be Empty";
+                }
+
+
+                else
+                {
+                    int StudentNo = Convert.ToInt32(StudNum.Text);
+                    int age = Convert.ToInt32(AgeB.Text);
+                    using (SqlConnection con = new SqlConnection(connectionSQL))
                     {
-                        cmd.Parameters.AddWithValue("@StudentNo", StudentNo);
-                        cmd.Parameters.AddWithValue("@FN", FN);
-                        cmd.Parameters.AddWithValue("@LN", LN);
-                        cmd.Parameters.AddWithValue("@MN", MN);
-                        cmd.Parameters.AddWithValue("@Age", age);
-                        cmd.Parameters.AddWithValue("@Birth", Birth);
-                        cmd.Parameters.AddWithValue("@Gender", Gender);
-                        cmd.Parameters.AddWithValue("@Program", Program);
-
-                        int result = cmd.ExecuteNonQuery();
-                        if (result > 0) {
-                            MessageBox.Show("Student Information Created");
-                            main.loaddata();
-                         
-                        }
-                        else if (result == 0)
+                        con.Open();
+                        string query = "INSERT INTO StudentInfo_Table (Student_ID, First_Name, Last_Name, Middle_Name, Age, Date_of_Birth, Gender, Program) VALUES  (@StudentNo, @FN, @LN, @MN, @Age, @Birth, @Gender, @Program); ";
+                        using (SqlCommand cmd = new SqlCommand(query, con))
                         {
-                            MessageBox.Show("Error");
+                            cmd.Parameters.AddWithValue("@StudentNo", StudentNo);
+                            cmd.Parameters.AddWithValue("@FN", FN);
+                            cmd.Parameters.AddWithValue("@LN", LN);
+                            cmd.Parameters.AddWithValue("@MN", MN);
+                            cmd.Parameters.AddWithValue("@Age", age);
+                            cmd.Parameters.AddWithValue("@Birth", Birth);
+                            cmd.Parameters.AddWithValue("@Gender", Gender);
+                            cmd.Parameters.AddWithValue("@Program", Program);
 
+                            int result = cmd.ExecuteNonQuery();
+                            if (result > 0)
+                            {
+                                MessageBox.Show("Student Information Created");
+                                main.loaddata();
+
+                            }
+                            else if (result == 0)
+                            {
+                                MessageBox.Show("Error");
+
+                            }
                         }
                     }
                 }
-
+            }
+            catch(Exception Ex)
+            {
+                MessageBox.Show("Wrong Input. Try Again.");
             }
         }
 
