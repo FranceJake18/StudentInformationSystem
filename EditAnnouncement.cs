@@ -67,12 +67,18 @@ namespace StudentInformationSystem
                 MessageBox.Show($"{selectedKey} updated successfully!");
                 var mainForm = (AnnouncementsPage)Application.OpenForms["AnnouncementsPage"];
                 mainForm?.RefreshListBoxes();
+                mainForm.RefreshListBoxes();
             }
             else
             {
                 MessageBox.Show("The input is empty, try again.");
             }
 
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

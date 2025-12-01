@@ -217,6 +217,7 @@
             this.Cancelbtn.TabIndex = 42;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = false;
+            this.Cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // Savebtn
             // 
@@ -252,8 +253,10 @@
             this.Controls.Add(this.NameOfStud);
             this.Controls.Add(this.StudNumGrade);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "ExportGradePage";
             this.Text = "ExportGradePage";
+            this.Load += new System.EventHandler(this.ExportGradePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

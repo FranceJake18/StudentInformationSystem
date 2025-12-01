@@ -255,6 +255,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
+            this.MaximizeBox = false;
             this.Name = "View_Profile";
             this.Text = "View_Profile";
             this.Load += new System.EventHandler(this.View_Profile_Load);

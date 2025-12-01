@@ -113,8 +113,9 @@ namespace StudentInformationSystem
             StudInfoPage GP = new StudInfoPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Grades_Click(object sender, EventArgs e)
@@ -122,8 +123,9 @@ namespace StudentInformationSystem
             GradesPage GP = new GradesPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Attendance_Click(object sender, EventArgs e)
@@ -134,11 +136,12 @@ namespace StudentInformationSystem
 
         private void Announcements_Click(object sender, EventArgs e)
         {
-            AttendancePage GP = new AttendancePage();
+            AnnouncementsPage GP = new AnnouncementsPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void markAttendance_Click_1(object sender, EventArgs e)
@@ -152,13 +155,15 @@ namespace StudentInformationSystem
         {
             View_Profile view = new View_Profile();
             view.ShowDialog();
-            this.Close();
+            
         }
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Hide();
-            this.Close();
+            loginPage login = new loginPage();
+            this.Hide(); ;
+            login.ShowDialog();
+
         }
 
         private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
@@ -181,8 +186,9 @@ namespace StudentInformationSystem
             LandingPage Land = new LandingPage();
             Land.StartPosition = FormStartPosition.CenterScreen;
             Land.Location = this.Location;
+            this.Hide();
             Land.ShowDialog();
-            this.Close();
+            
         }
     }
 }

@@ -39,6 +39,7 @@ namespace StudentInformationSystem
                
                 var mainForm = (AnnouncementsPage)Application.OpenForms["AnnouncementsPage"];
                 mainForm?.RefreshListBoxes();
+                mainForm.Refresh();
             }
             else
             {
@@ -77,6 +78,11 @@ namespace StudentInformationSystem
         private void AddAnnouncement_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

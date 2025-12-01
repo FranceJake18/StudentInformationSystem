@@ -39,7 +39,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchAccTextBox = new System.Windows.Forms.TextBox();
             this.SearchAccInfo = new System.Windows.Forms.Button();
             this.DeleteAccInfo = new System.Windows.Forms.Button();
@@ -135,22 +134,16 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.editProfileToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "Logout";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.editProfileToolStripMenuItem.Text = "Edit Profile";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // SearchAccTextBox
             // 
@@ -221,6 +214,7 @@
             this.EditAccInfo.TabIndex = 19;
             this.EditAccInfo.Text = "Edit";
             this.EditAccInfo.UseVisualStyleBackColor = false;
+            this.EditAccInfo.Click += new System.EventHandler(this.EditAccInfo_Click);
             // 
             // dataAccinfo
             // 
@@ -303,7 +297,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox SearchAccTextBox;
         private System.Windows.Forms.Button SearchAccInfo;

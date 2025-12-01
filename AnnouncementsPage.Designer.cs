@@ -321,8 +321,10 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "AnnouncementsPage";
             this.Text = "AnnouncementsPage";
+            this.Activated += new System.EventHandler(this.AnnouncementsPage_Activated);
             this.Load += new System.EventHandler(this.AnnouncementsPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

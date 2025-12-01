@@ -88,6 +88,7 @@
             this.Cancelbtn.TabIndex = 56;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = false;
+            this.Cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // label5
             // 
@@ -154,6 +155,7 @@
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.AnnouncementCB);
+            this.MaximizeBox = false;
             this.Name = "AddAnnouncement";
             this.Text = "AddAnnouncement";
             this.Load += new System.EventHandler(this.AddAnnouncement_Load);

@@ -97,6 +97,7 @@
             this.Cancelbtn.TabIndex = 63;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = false;
+            this.Cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // label5
             // 
@@ -131,6 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(558, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Input);
@@ -138,6 +140,7 @@
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.AnnouncementCB);
+            this.MaximizeBox = false;
             this.Name = "EditAnnouncement";
             this.Text = "EditAnnouncement";
             this.Load += new System.EventHandler(this.EditAnnouncement_Load);

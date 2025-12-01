@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using UpdateProfile;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace StudentInformationSystem
@@ -196,7 +197,28 @@ namespace StudentInformationSystem
         private void EditProfile_FormClosed(object sender, FormClosedEventArgs e)
         {
             LandingPage LAND = new LandingPage();
-            LAND.Show();
+            LAND.StartPosition = FormStartPosition.CenterScreen;
+            LAND.Location = this.Location;
+            this.Hide();
+            LAND.ShowDialog();
+        }
+
+        private void EditProfile_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LandingPage LAND = new LandingPage();
+            LAND.StartPosition = FormStartPosition.CenterScreen;
+            LAND.Location = this.Location;
+            this.Hide();
+            LAND.ShowDialog();
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            LandingPage LAND = new LandingPage();
+            LAND.StartPosition = FormStartPosition.CenterScreen;
+            LAND.Location = this.Location;
+            this.Hide();
+            LAND.ShowDialog();
         }
     }
 }

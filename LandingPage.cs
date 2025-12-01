@@ -36,8 +36,9 @@ namespace StudentInformationSystem
             StudInfoPage GP = new StudInfoPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Grades_Click(object sender, EventArgs e)
@@ -45,8 +46,9 @@ namespace StudentInformationSystem
             GradesPage GP = new GradesPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Attendance_Click(object sender, EventArgs e)
@@ -54,8 +56,9 @@ namespace StudentInformationSystem
             AttendancePage GP = new AttendancePage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Announcements_Click(object sender, EventArgs e)
@@ -63,21 +66,23 @@ namespace StudentInformationSystem
             AnnouncementsPage GP = new AnnouncementsPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             View_Profile view = new View_Profile();
             view.ShowDialog();
-            this.Close();
+            
         }
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Hide();
-            this.Close();
+            loginPage login = new loginPage();
+            this.Hide(); ;
+            login.ShowDialog();
         }
     }
 }

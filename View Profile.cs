@@ -77,14 +77,18 @@ namespace StudentInformationSystem
 
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
-            StudInfoPage stud = new StudInfoPage();
             this.Hide();
         }
 
         private void Editbtn_Click(object sender, EventArgs e)
         {
             EditProfile edit = new EditProfile(this);
-            this.Hide();
+            foreach (Form form in System.Windows.Forms.Application.OpenForms.Cast<Form>().ToList())
+            {
+
+                if (form != edit) 
+                    form.Hide();
+            }
             edit.ShowDialog();
         }
     }

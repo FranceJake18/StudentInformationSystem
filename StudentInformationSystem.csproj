@@ -103,6 +103,12 @@
     <Compile Include="EdiitStudentAccounts.Designer.cs">
       <DependentUpon>EdiitStudentAccounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditAdminAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAdminAccount.Designer.cs">
+      <DependentUpon>EditAdminAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditAnnouncement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdiitStudentAccounts.resx">
       <DependentUpon>EdiitStudentAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAdminAccount.resx">
+      <DependentUpon>EditAdminAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditAnnouncement.resx">
       <DependentUpon>EditAnnouncement.cs</DependentUpon>

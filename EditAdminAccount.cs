@@ -5,71 +5,63 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace StudentInformationSystem
 {
-    public partial class EdiitStudentAccounts : Form
-    {
+    public partial class EditAdminAccount : Form
 
-        public string Student_ID { get; set; }
-        public EdiitStudentAccounts()
+    {
+        public string User_name { get; set; }
+        public EditAdminAccount()
         {
             InitializeComponent();
         }
-
-        public void LoadEditData(int id, string firstN, string lastN, string middN, int age, DateTime birthday, string gender, string program)
+        public void LoadEditAccData(string usn, string pass, string firstN, string lastN, string middN)
         {
-            Student_ID = id.ToString();
+            User_name = usn;
+            Password.Text = pass;
             FirstN.Text = firstN;
             LastN.Text = lastN;
             MidN.Text = middN;
-            AgeB.Text = age.ToString();
-            BirthDTP.Value = birthday;
-            GenderCB.Text = gender;
-            ProgramCB.Text = program;
+    
         }
-        private void EdiitStudentAccounts_Load(object sender, EventArgs e)
+        private void EditAdminAccount_Load(object sender, EventArgs e)
         {
 
         }
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-
+            try{
                 if (string.IsNullOrWhiteSpace(FirstN.Text))
                 {
-                    FirstName.Text = "Invalid Input";
+                    FName.Text = "Invalid Input";
                 }
                 if (string.IsNullOrWhiteSpace(LastN.Text))
                 {
-                    LastName.Text = "Invalid Input";
+                    LName.Text = "Invalid Input";
                 }
 
 
-                if (string.IsNullOrWhiteSpace(ProgramCB.Text))
+                if (string.IsNullOrWhiteSpace(Username.Text))
                 {
-                    ProgramE.Text = "Invalid Input";
+                    UserN.Text = "Invalid Input";
                 }
-                if (string.IsNullOrWhiteSpace(GenderCB.Text))
+                if (string.IsNullOrWhiteSpace(Password.Text))
                 {
-                    GenderError.Text = "Invalid Input";
+                    PassW.Text = "Invalid Input";
                 }
-                if (string.IsNullOrWhiteSpace(AgeB.Text))
-                {
-                    AgeError.Text = "Invalid Input";
-                }
+
                 else
                 {
                     using (SqlConnection conn = new SqlConnection("data source=DESKTOP-HHPGTHF; initial catalog=StudentInformation; User ID = sa; Password = EmbateChris;"))
                     {
                         conn.Open();
-                        string query = "UPDATE StudentInfo_Table SET First_Name=@FN, Last_Name=@LN, Middle_Name = @MN,  Age = @Age, Date_of_Birth = @DTP, Gender = @Gender, Program= @PB  WHERE Student_ID=@ID";
+                        string query = "UPDATE Registered_Accounts SET Password = @Pass, First_Name=@FN, Last_Name=@LN, Middle_Name = @MN  WHERE Username=@ID";
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
 
@@ -77,26 +69,24 @@ namespace StudentInformationSystem
                             cmd.Parameters.AddWithValue("@FN", FirstN.Text);
                             cmd.Parameters.AddWithValue("@LN", LastN.Text);
                             cmd.Parameters.AddWithValue("@MN", MidN.Text);
-                            cmd.Parameters.AddWithValue("@Age", int.Parse(AgeB.Text));
-                            cmd.Parameters.AddWithValue("@DTP", BirthDTP.Value.Date);
-                            cmd.Parameters.AddWithValue("@Gender", GenderCB.Text);
-                            cmd.Parameters.AddWithValue("@PB", ProgramCB.Text);
-                            cmd.Parameters.AddWithValue("@ID", Student_ID);
+
+                            cmd.Parameters.AddWithValue("@Pass", Password.Text);
+                            cmd.Parameters.AddWithValue("@ID", User_name);
+
 
                             int rowsAffected = cmd.ExecuteNonQuery();
 
                             if (rowsAffected > 0)
                             {
-                                string queryID = @"UPDATE StudentInfo_Table SET Student_ID=@SID  WHERE First_Name =@FN AND Last_Name = @LN";
+                                string queryID = @"UPDATE Registered_Accounts SET Username=@UN WHERE First_Name =@FN AND Last_Name = @LN";
 
-                                if (string.IsNullOrWhiteSpace(StudNum.Text))
+                                if (string.IsNullOrWhiteSpace(UserN.Text))
                                 {
                                     using (SqlCommand command = new SqlCommand(queryID, conn))
                                     {
-                                        command.Parameters.AddWithValue("@SID", Student_ID);
+                                        command.Parameters.AddWithValue("@UN", User_name);
                                         command.Parameters.AddWithValue("@FN", FirstN.Text);
                                         command.Parameters.AddWithValue("@LN", LastN.Text);
-
                                         command.ExecuteNonQuery();
                                     }
 
@@ -106,7 +96,7 @@ namespace StudentInformationSystem
 
                                     using (SqlCommand command = new SqlCommand(queryID, conn))
                                     {
-                                        command.Parameters.AddWithValue("@SID", StudNum.Text);
+                                        command.Parameters.AddWithValue("@UN", UserN.Text);
                                         command.Parameters.AddWithValue("@FN", FirstN.Text);
                                         command.Parameters.AddWithValue("@LN", LastN.Text);
                                         command.ExecuteNonQuery();
@@ -129,10 +119,9 @@ namespace StudentInformationSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid Inpuut. Try Again.");
-            }
 
+                MessageBox.Show("Invalid Input. Try Again.");
             }
         }
     }
-
+}

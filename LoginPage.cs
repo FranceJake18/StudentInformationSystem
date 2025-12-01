@@ -27,6 +27,8 @@ namespace StudentInformationSystem
 
         public void loadpage()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Location = this.Location;
             PasswordtextBox.UseSystemPasswordChar = true;
             PasswordtextBox.PasswordChar = '*';
             PasswordtextBox.MaxLength = 20;
@@ -34,6 +36,8 @@ namespace StudentInformationSystem
 
         private void loginPage_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Location = this.Location;
             PasswordtextBox.UseSystemPasswordChar = true;
             PasswordtextBox.PasswordChar = '*';
             PasswordtextBox.MaxLength = 20;
@@ -42,6 +46,8 @@ namespace StudentInformationSystem
         private void CreateAccount_Click(object sender, EventArgs e)
         {
             CreateAccountPage cap = new CreateAccountPage();
+            cap.StartPosition = FormStartPosition.CenterScreen;
+            cap.Location = this.Location;
             this.Hide();
             cap.ShowDialog();
         }
@@ -78,14 +84,20 @@ namespace StudentInformationSystem
                         if (result == "Admin")
                         {
                             AddAccInfo landing = new AddAccInfo();
+                            landing.StartPosition = FormStartPosition.CenterScreen;
+                            landing.Location = this.Location;
                             this.Hide();
                             landing.ShowDialog();
+                           
                         }
                         else if(result == "User")
                         {
                             LandingPage landing = new LandingPage();
+                            landing.StartPosition = FormStartPosition.CenterScreen;
+                            landing.Location = this.Location;
                             this.Hide();
                             landing.ShowDialog();
+                            
                         }
                     }
                     else
@@ -106,6 +118,15 @@ namespace StudentInformationSystem
         private void CreateAccc_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
+        }
+
+        private void loginPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

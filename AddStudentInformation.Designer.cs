@@ -410,6 +410,7 @@
             this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "ProgramError";
             this.Text = "AddStudentInformation";
             this.Load += new System.EventHandler(this.AddStudentInformation_Load);

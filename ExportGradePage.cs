@@ -102,5 +102,15 @@ namespace StudentInformationSystem
             error = string.Empty;
             return true;
         }
+
+        private void ExportGradePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

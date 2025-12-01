@@ -135,22 +135,30 @@ namespace StudentInformationSystem
 
         private void SearchStudInfo_Click_1(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(connectionSQL))
+            try
             {
-                con.Open();
-                string query = "SELECT * FROM StudentInfo_Table WHERE Student_ID = @ID";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlConnection con = new SqlConnection(connectionSQL))
                 {
-                    cmd.Parameters.AddWithValue("@ID", int.Parse(SearchStudTextBox.Text));
+                    con.Open();
+                    string query = "SELECT * FROM StudentInfo_Table WHERE Student_ID = @ID";
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", int.Parse(SearchStudTextBox.Text));
 
-                    dataStudInfo.DataSource = dt;
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        dataStudInfo.DataSource = dt;
+                    }
                 }
             }
+            catch(Exception)
+            {
+                MessageBox.Show("Invalid Input. Try Again.");
+            }
+           
         }
 
         private void StudInfo_Click(object sender, EventArgs e)
@@ -161,16 +169,16 @@ namespace StudentInformationSystem
 
         private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProfileMenu.Hide();
-            this.Close();
-
+            loginPage login = new loginPage();
+            this.Hide(); ;
+            login.ShowDialog();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             View_Profile view = new View_Profile();
             view.ShowDialog();
-            this.Close();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -189,8 +197,9 @@ namespace StudentInformationSystem
             GradesPage GP = new GradesPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Attendance_Click(object sender, EventArgs e)
@@ -198,8 +207,9 @@ namespace StudentInformationSystem
             AttendancePage GP = new AttendancePage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void Announcements_Click(object sender, EventArgs e)
@@ -207,8 +217,9 @@ namespace StudentInformationSystem
             AnnouncementsPage GP = new AnnouncementsPage();
             GP.StartPosition = FormStartPosition.CenterScreen;
             GP.Location = this.Location;
+            this.Hide();
             GP.ShowDialog();
-            this.Close();
+            
         }
 
         private void StudinfoSystem_Click(object sender, EventArgs e)
@@ -216,8 +227,9 @@ namespace StudentInformationSystem
             LandingPage Land = new LandingPage();
             Land.StartPosition = FormStartPosition.CenterScreen;
             Land.Location = this.Location;
+            this.Hide();
             Land.ShowDialog();
-            this.Close();
+            
         }
         private string GetCellValue(DataGridViewRow row, string columnName)
         {
@@ -256,7 +268,7 @@ namespace StudentInformationSystem
                     MessageBox.Show("Please select a row to edit.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error Input. Try Again.");
             }

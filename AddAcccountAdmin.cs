@@ -98,6 +98,71 @@ namespace StudentInformationSystem
         {
             this.Hide();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PassW_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MidN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LastN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

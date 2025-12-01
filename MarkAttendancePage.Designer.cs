@@ -248,8 +248,10 @@
             this.Controls.Add(this.StudNumGrade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "MarkAttendancePage";
             this.Text = "MarkAttendancePage";
+            this.Load += new System.EventHandler(this.MarkAttendancePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

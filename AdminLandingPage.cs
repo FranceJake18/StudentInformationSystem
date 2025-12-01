@@ -76,7 +76,7 @@ namespace StudentInformationSystem
             using (SqlConnection con = new SqlConnection(connectionSQL))
             {
                 con.Open();
-                string query = "DELETE FROM Registered_Acounts WHERE Username = @Username";
+                string query = "DELETE FROM Registered_Accounts WHERE Username = @Username";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Username", StudUS);
@@ -89,19 +89,27 @@ namespace StudentInformationSystem
         {
             using (SqlConnection con = new SqlConnection(connectionSQL))
             {
-                con.Open();
-                string query = "SELECT * FROM StudentInfo_Table WHERE Student_ID = @ID";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@ID", int.Parse(SearchAccTextBox.Text));
+                    con.Open();
+                    string query = "SELECT * FROM StudentInfo_Table WHERE Student_ID = @ID";
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", int.Parse(SearchAccTextBox.Text));
 
-                    dataAccinfo.DataSource = dt;
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        dataAccinfo.DataSource = dt;
+                    }
                 }
+                catch(Exception)
+                {
+                    MessageBox.Show("Wrong Input. Try Again.");
+                }
+                
             }
         }
 
@@ -116,8 +124,56 @@ namespace StudentInformationSystem
             LandingPage Land = new LandingPage();
             Land.StartPosition = FormStartPosition.CenterScreen;
             Land.Location = this.Location;
+            this.Hide();
             Land.ShowDialog();
-            this.Close();
+            
+        }
+        private string GetCellValue(DataGridViewRow row, string columnName)
+        {
+            return row.Cells[columnName]?.Value?.ToString() ?? string.Empty;
+        }
+        private void EditAccInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataAccinfo.SelectedRows.Count > 0)
+                {
+
+                    DataGridViewRow row = dataAccinfo.SelectedRows[0];
+
+
+                    EditAdminAccount Edit = new EditAdminAccount();
+                    Edit.LoadEditAccData (
+                    row.Cells["Username"].Value?.ToString(),
+                    row.Cells["Password"].Value?.ToString(),
+                    row.Cells["First_Name"].Value?.ToString(),
+                    row.Cells["Last_Name"].Value?.ToString(),
+                    row.Cells["Middle_Name"].Value?.ToString()
+                   
+    );
+                    Edit.StartPosition = FormStartPosition.CenterScreen;
+                    Edit.Location = this.Location;
+                    Edit.ShowDialog();
+
+                    loaddata();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to edit.");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error Input. Try Again.");
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loginPage login = new loginPage();
+            this.Hide(); ;
+            login.ShowDialog();
         }
     }
-    }
+}
+    

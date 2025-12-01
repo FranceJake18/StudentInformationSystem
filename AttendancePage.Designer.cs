@@ -317,6 +317,7 @@
             this.Controls.Add(this.dataAttendance);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "AttendancePage";
             this.Text = "AttendancePage";
             this.Load += new System.EventHandler(this.AttendancePage_Load_1);

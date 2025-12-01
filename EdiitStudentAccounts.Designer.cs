@@ -421,6 +421,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(785, 466);
             this.Controls.Add(this.MiddleName);
             this.Controls.Add(this.AgeError);
@@ -449,6 +450,7 @@
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "EdiitStudentAccounts";
             this.Text = "EditStudentInformation";
             this.Load += new System.EventHandler(this.EdiitStudentAccounts_Load);

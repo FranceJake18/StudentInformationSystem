@@ -23,9 +23,6 @@ namespace StudentInformationSystem
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            View_Profile view = new View_Profile();
-            view.ShowDialog();
-            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -57,8 +54,8 @@ namespace StudentInformationSystem
         {
             LoadListBox(listBox1, @"C:\Users\Christopher\Desktop\file1.txt");
             LoadListBox(listBox2, @"C:\Users\Christopher\Desktop\file2.txt");
-            LoadListBox(listBox2, @"C:\Users\Christopher\Desktop\file3.txt");
-            LoadListBox(listBox3, @"C:\Users\Christopher\Desktop\file4.txt");
+            LoadListBox(listBox3, @"C:\Users\Christopher\Desktop\file3.txt");
+            LoadListBox(listBox4, @"C:\Users\Christopher\Desktop\file4.txt");
         }
 
 
@@ -68,7 +65,7 @@ namespace StudentInformationSystem
             studInfoPage.StartPosition = FormStartPosition.CenterScreen;
             studInfoPage.Location = this.Location;
             studInfoPage.ShowDialog();
-            this.Close();
+            this.Hide();
         }
 
         private void CreateA_Click(object sender, EventArgs e)
@@ -85,7 +82,8 @@ namespace StudentInformationSystem
 
         private void View_Profile_Click(object sender, EventArgs e)
         {
-
+            View_Profile view = new View_Profile();
+            view.ShowDialog();
         }
 
         private void Grades_Click(object sender, EventArgs e)
@@ -93,8 +91,9 @@ namespace StudentInformationSystem
             GradesPage studInfoPage = new GradesPage();
             studInfoPage.StartPosition = FormStartPosition.CenterScreen;
             studInfoPage.Location = this.Location;
+            this.Hide();
             studInfoPage.ShowDialog();
-            this.Close();
+            
         }
 
         private void Attendance_Click(object sender, EventArgs e)
@@ -102,19 +101,21 @@ namespace StudentInformationSystem
             AttendancePage studInfoPage = new AttendancePage();
             studInfoPage.StartPosition = FormStartPosition.CenterScreen;
             studInfoPage.Location = this.Location;
+            this.Hide();
             studInfoPage.ShowDialog();
-            this.Close();
+            
         }
 
         private void Announcements_Click(object sender, EventArgs e)
         {
-            this.Refresh();
+            RefreshListBoxes();
         }
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Hide();
-            this.Close();
+            loginPage login = new loginPage();
+            this.Hide(); ;
+            login.ShowDialog();
         }
 
         private void StudinfoSystem_Click(object sender, EventArgs e)
@@ -122,8 +123,14 @@ namespace StudentInformationSystem
             LandingPage Land = new LandingPage();
             Land.StartPosition = FormStartPosition.CenterScreen;
             Land.Location = this.Location;
+            this.Hide();
             Land.ShowDialog();
-            this.Close();
+            
+        }
+
+        private void AnnouncementsPage_Activated(object sender, EventArgs e)
+        {
+            RefreshListBoxes();
         }
     }
 }

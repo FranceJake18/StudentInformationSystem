@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.StudinfoSystem);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(785, 58);
+            this.panel1.Size = new System.Drawing.Size(784, 58);
             this.panel1.TabIndex = 2;
             // 
             // StudinfoSystem
@@ -204,6 +204,7 @@
             this.Cancelbtn.TabIndex = 29;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = false;
+            this.Cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // Imageb
             // 
@@ -255,8 +256,10 @@
             this.Controls.Add(this.UserN);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "EditProfile";
             this.Text = "-";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditProfile_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProfile_FormClosed);
             this.Load += new System.EventHandler(this.EditProfile_Load);
             this.panel1.ResumeLayout(false);

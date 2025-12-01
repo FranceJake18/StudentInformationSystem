@@ -198,6 +198,8 @@
             this.MaximizeBox = false;
             this.Name = "loginPage";
             this.Text = "Login Page";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loginPage_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.loginPage_FormClosed);
             this.Load += new System.EventHandler(this.loginPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

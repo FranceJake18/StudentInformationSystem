@@ -95,5 +95,10 @@ namespace StudentInformationSystem
         {
 
         }
+
+        private void MarkAttendancePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
